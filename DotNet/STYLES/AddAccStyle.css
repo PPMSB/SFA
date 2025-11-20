@@ -1,0 +1,33 @@
+﻿/* Apply a general style to the form */
+form {
+    max-width: 2000px; /* Set a maximum width for the form */
+    background-color :bisque;
+}
+
+.header {
+    background-color :aqua;
+}
+
+/* Apply styles to form elements */
+.form-group {
+    margin-bottom: 15px;
+}
+
+/* Add background color to the Salesman Declaration heading */
+h2 {
+    background-color:aliceblue; /* Choose your desired background color */
+    padding: 10px; /* Add padding for better aesthetics */
+    margin-bottom: 20px; /* Adjust margin for spacing */
+}
+
+.checkbox-item {
+    padding: 5px;
+}
+
+.white-background {
+    background-color: white;
+}
+
+
+
+

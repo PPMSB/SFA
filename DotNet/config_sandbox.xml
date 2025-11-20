@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+  <settings>
+    <!-- Sandbox API -->
+    <url_domain>https://preprod-api.myinvois.hasil.gov.my</url_domain>
+    <tax_payer_login_api>/connect/token</tax_payer_login_api>
+    <documents_api>/api/v1.0/documentsubmissions/</documents_api>
+
+    <!-- Sandbox Ax -->
+    <ax_user_id>yongwc</ax_user_id>
+    <ax_object_server>AOS2009:2725</ax_object_server>
+    <ax_domain_name>LIONPB</ax_domain_name>
+    <ax_proxy_user_name>axbcproxy</ax_proxy_user_name>
+    <ax_proxy_password>aos20@9</ax_proxy_password>
+    <ax_language>EN-US</ax_language>
+    
+    <!-- Sandbox Mysql -->
+    <lhdn_mysql_conn_string>server=localhost;user=hirevadm_lhdn;database=lhdn_db;port=3306;password=lhdn@Hirevadmin#1</lhdn_mysql_conn_string>
+
+    <!-- Company settings start here -->
+    <companies>
+
+      <!-- PPM -->
+      <company>
+        <short_name>PPM</short_name>
+        <name>Posim Petroleum Marketing Sdn Bhd</name>
+        <selectable>true</selectable>
+        <tin>C3878121020</tin>
+        <brn>198501007134</brn>
+        <!-- appointed intermediary -->
+        <intermediary>
+          <short_name></short_name>
+          <access_token_validity>3500</access_token_validity>
+          <access_token></access_token>
+          <access_token_start_time></access_token_start_time>
+        </intermediary>
+        <!-- e-Invoice API login details -->
+        <login>
+          <client_id>248d8d0d-798e-4267-9234-b24c1a3dd430</client_id>
+          <client_secret>bb8034c3-e096-460d-a5bb-22b95d4d0f50</client_secret>
+          <client_secret_2>6432bac3-8b7e-451d-82ee-b3067729f4b3</client_secret_2>
+          <grant_type>client_credentials</grant_type>
+          <scope>InvoicingAPI</scope>
+        </login>
+        <!-- e-Invoice API bearer token -->
+        <token>
+          <access_token_validity>3500</access_token_validity>
+          <access_token></access_token>
+          <access_token_start_time></access_token_start_time>
+        </token>
+      </company>
+
+      <!-- LPP/PPP -->
+      <company>
+        <short_name>PPP</short_name>
+        <!-- PPP = LPP on Axapta-->
+        <name>Lion Petroleum Products Sdn Bhd</name>
+        <selectable>true</selectable>
+        <tin>C3877781090</tin>
+        <brn>198501006713</brn>
+        <!-- appointed intermediary -->
+        <intermediary>
+          <short_name>PPM</short_name>
+          <access_token_validity>3500</access_token_validity>
+          <access_token></access_token>
+          <access_token_start_time></access_token_start_time>
+        </intermediary>
+        <!-- e-Invoice API login details -->
+        <login>
+          <client_id>0974e0ad-eca3-4cc5-aa2f-bb02204d7ab8</client_id>
+          <client_secret>264a4b86-18de-4683-a13f-d90451b29bf3</client_secret>
+          <client_secret_2>8b8816a8-665f-4f38-95cf-2f2ddf5584ce</client_secret_2>
+          <grant_type>client_credentials</grant_type>
+          <scope>InvoicingAPI</scope>
+        </login>
+        <!-- e-Invoice API bearer token -->
+        <token>
+          <access_token_validity>3500</access_token_validity>
+          <access_token></access_token>
+          <access_token_start_time></access_token_start_time>
+        </token>
+      </company>
+
+      <!-- PMSB/PBM -->
+      <company>
+        <short_name>PBM</short_name>
+        <name>Posim Marketing Sdn Bhd</name>
+        <selectable>false</selectable>
+        <tin>C3875849000</tin>
+        <brn>198501004385</brn>
+        <!-- appointed intermediary -->
+        <intermediary>
+          <short_name>PPM</short_name>
+          <access_token_validity>3500</access_token_validity>
+          <access_token></access_token>
+          <access_token_start_time></access_token_start_time>
+        </intermediary>
+        <!-- e-Invoice API login details -->
+        <login>
+          <client_id>d9486053-dc91-43ec-88e0-add7c5c21931</client_id>
+          <client_secret>f1f0994d-d532-4ac5-9306-68b36d67e638</client_secret>
+          <client_secret_2>47707896-d253-469b-a88c-1e4e06f47e34</client_secret_2>
+          <grant_type>client_credentials</grant_type>
+          <scope>InvoicingAPI</scope>
+        </login>
+        <!-- e-Invoice API bearer token -->
+        <token>
+          <access_token_validity>3500</access_token_validity>
+          <access_token></access_token>
+          <access_token_start_time></access_token_start_time>
+        </token>
+      </company>
+    </companies>
+  </settings>
+</configuration>

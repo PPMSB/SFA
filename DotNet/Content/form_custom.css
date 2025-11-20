@@ -1,0 +1,326 @@
+﻿body {
+    overflow: auto;
+}
+
+.rblMT {
+    margin-top: 5px;
+}
+
+.mt_1 {
+    margin-top: 10px;
+}
+
+.mt_2 {
+    margin-top: 20px;
+}
+
+.mt_3 {
+    margin-top: 30px;
+}
+
+.mt_4 {
+    margin-top: 40px;
+}
+
+.mb_1 {
+    margin-bottom: 10px;
+}
+
+.mb_2 {
+    margin-bottom: 20px;
+}
+
+.mb_3 {
+    margin-bottom: 30px;
+}
+
+.ml_3 {
+    margin-left: 30px;
+}
+
+.mr_3 {
+    margin-right: 30px;
+}
+
+.control-label {
+    font-weight: bold !important;
+}
+
+.fc-widget-header {
+    background-color: dodgerblue !important;
+}
+
+.fc th {
+    border-style: solid;
+    border-width: 0px !important;
+    padding: 0;
+    height: 30px !important;
+}
+
+.fc th {
+    vertical-align: middle !important;
+}
+
+    .fc th > span {
+        color: white !important;
+    }
+
+.fc-list-heading-main {
+    color: white !important;
+}
+
+.fc-list-heading-alt {
+    color: white !important;
+}
+/*#myNavbar {
+    overflow: hidden;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}*/
+/*.nav-tabs > li > a :target {
+    color: #333 !important;
+    background-color: #eee !important;
+}*/
+
+.gvCss {
+    border-radius: 6px !important;
+    border: 2px solid #ddd !important;
+    border-collapse: separate !important;
+}
+
+    .gvCss th {
+        background-color: lightblue !important;
+    }
+
+@media (min-width: 1200px) {
+    .btn_Width {
+        width: 60% !important;
+        margin-left: 20% !important;
+    }
+
+    .txtAddrCss {
+        width: 263% !important;
+    }
+
+    .txtNmEnCss {
+        width: 130% !important;
+    }
+
+    .table-bordered {
+        font-size: 80% !important;
+    }
+
+        .table-bordered > tbody > tr > td,
+        .table-bordered > tbody > tr > th,
+        .table-bordered > tfoot > tr > td,
+        .table-bordered > tfoot > tr > th,
+        .table-bordered > thead > tr > td,
+        .table-bordered > thead > tr > th {
+            padding: 5px !important;
+            line-height: 1.42857143;
+            vertical-align: middle !important;
+            border-top: 1px solid #ddd;
+        }
+
+    .BtnSave {
+        margin-left: -10%;
+    }
+
+    .btnSetupModuleInsert {
+        margin-left: -1%;
+    }
+
+    .chkShow {
+        margin-left: 75%;
+    }
+
+    .chkBoxPassAddUser {
+        margin-left: 10%;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .btn_Width {
+        width: 20% !important;
+        margin-left: 40% !important;
+    }
+
+    .txtAddrCss {
+        width: 235% !important;
+    }
+
+    .table-bordered {
+        font-size: 80% !important;
+    }
+
+        .table-bordered > tbody > tr > td,
+        .table-bordered > tbody > tr > th,
+        .table-bordered > tfoot > tr > td,
+        .table-bordered > tfoot > tr > th,
+        .table-bordered > thead > tr > td,
+        .table-bordered > thead > tr > th {
+            padding: 5px !important;
+            line-height: 1.42857143;
+            vertical-align: middle !important;
+            border-top: 1px solid #ddd;
+        }
+
+    .BtnSave {
+        margin-left: -10%;
+    }
+
+    .btnSetupModuleInsert {
+        margin-left: -2%;
+    }
+
+    .chkShow {
+        margin-left: 80%;
+    }
+
+    .chkBoxPassAddUser {
+        margin-left: 4%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .btn_Width {
+        width: 20% !important;
+        margin-left: 40% !important;
+    }
+
+    .table-bordered {
+        font-size: 80% !important;
+    }
+
+        .table-bordered > tbody > tr > td,
+        .table-bordered > tbody > tr > th,
+        .table-bordered > tfoot > tr > td,
+        .table-bordered > tfoot > tr > th,
+        .table-bordered > thead > tr > td,
+        .table-bordered > thead > tr > th {
+            padding: 5px !important;
+            line-height: 1.42857143;
+            vertical-align: middle !important;
+            border-top: 1px solid #ddd;
+        }
+
+    .BtnSave {
+        margin-left: -10%;
+    }
+
+    .btnSetupModuleInsert {
+        margin-left: -2%;
+    }
+
+    .chkShow {
+        margin-left: 10%;
+    }
+
+    .chkBoxPassAddUser {
+        margin-left: 4%;
+    }
+
+    .btnUpdatePswdEditUser {
+        width: 30% !important;
+        margin-left: 3% !important;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .btn_Width {
+        width: 20% !important;
+        margin-left: 40% !important;
+    }
+
+    .table-bordered {
+        font-size: 80% !important;
+    }
+
+        .table-bordered > tbody > tr > td,
+        .table-bordered > tbody > tr > th,
+        .table-bordered > tfoot > tr > td,
+        .table-bordered > tfoot > tr > th,
+        .table-bordered > thead > tr > td,
+        .table-bordered > thead > tr > th {
+            padding: 5px !important;
+            line-height: 1.42857143;
+            vertical-align: middle !important;
+            border-top: 1px solid #ddd;
+        }
+
+    .BtnSave {
+        margin-left: -10%;
+    }
+
+    .btnSetupModuleUpdate, .btnSetupModuleDelete, .btnMenuClear, .btnMenuExit, .btnEditUserGoListing, .btnEmpAttnRpt {
+        margin-top: 10px;
+    }
+
+    .chkShow {
+        margin-left: 10%;
+    }
+
+    .chkBoxPassAddUser {
+        margin-left: 4%;
+    }
+
+    .btnUpdatePswdEditUser {
+        width: 30% !important;
+        margin-left: 3% !important;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .btn_Width {
+        width: 40% !important;
+        margin-left: 30% !important;
+    }
+
+    .btnReset {
+        margin-left: 16%;
+    }
+
+    .table-bordered {
+        font-size: 80% !important;
+    }
+
+        .table-bordered > tbody > tr > td,
+        .table-bordered > tbody > tr > th,
+        .table-bordered > tfoot > tr > td,
+        .table-bordered > tfoot > tr > th,
+        .table-bordered > thead > tr > td,
+        .table-bordered > thead > tr > th {
+            padding: 5px !important;
+            line-height: 1.42857143;
+            vertical-align: middle !important;
+            border-top: 1px solid #ddd;
+        }
+
+    .dropdownYr {
+        margin-top: 12px;
+    }
+
+    .dropdownEmp, .chkboxUnlock, .dropdownMth {
+        margin-top: 6px;
+    }
+
+    .btnSetupModuleUpdate, .btnSetupModuleDelete {
+        margin-top: 10px;
+    }
+
+    .chkShow {
+        margin-left: 10%;
+    }
+
+    .btnMenuClear, .btnMenuExit, .btnEditUserGoListing, .btnEmpAttnRpt {
+        margin-top: 10px;
+    }
+
+    .chkBoxPassAddUser {
+        margin-left: 5%;
+    }
+}

@@ -1,0 +1,540 @@
+﻿html {
+    font-family: Arial, sans-serif;
+    background: white;
+    width: 21cm;
+    height: 27cm;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.Form_Header {
+    border: none;
+    height: auto;
+    width: 100%;
+    text-align: center;
+}
+
+.Company_Icon {
+    max-width: 100%;
+}
+
+.gettext_FormType {
+    color: black;
+    font-size: 15px;
+    font-weight: bold;
+    text-decoration: none;
+    /*letter-spacing: 1px;*/
+}
+
+.gettext_author {
+    color: black;
+    font-size: 12px;
+    font-weight: normal;
+    min-width: 50px;
+    max-width: 250px;
+    max-height: 40px;
+    text-decoration: none;
+}
+/*-----------------------------------*/
+.button_print {
+    font-size: 15px;
+    color: black;
+    background-color: rgba(0,0,0,0.3);
+    top: 0;
+    left: 40%;
+    position: fixed;
+    border: none;
+    font-weight:bold;
+}
+
+/*-----------------------------------*/
+.table_style {
+    background-color: white;
+    border: none;
+    width: 100%;
+    text-align: center;
+    color: black;
+    table-layout: fixed;
+    margin: 0px;
+    border-collapse: collapse;
+    text-decoration: none;
+}
+
+    .table_style th {
+        border: 1px solid black;
+        padding: 1px;
+        font-size: 15px;
+        font-weight: normal;
+        text-decoration: none; /*vertical-align: text-top;*/
+    }
+
+    .table_style td {
+        border: 1px solid black;
+        padding: 1px;
+        font-size: 15px;
+        font-weight: normal;
+        text-decoration: none;
+    }
+
+    .table_style th {
+        padding-bottom: 5px;
+        padding-top: 5px;
+        /*background-color:lightgrey;*/
+    }
+/*-----------------------------------*/
+.table_style_HeaderCustomerInfo {
+    background-color: white;
+    border: none;
+    width: 100%;
+    text-align: left;
+    color: black;
+    table-layout: fixed;
+    margin: 0px;
+    text-decoration: none;
+}
+
+.table_style_HeaderCompanyInfo th {
+    border: none;
+    padding: 1px;
+    font-size: 15px;
+    font-weight: normal;
+    text-decoration: none;
+}
+
+.table_style_HeaderCompanyInfo td {
+    border: 1px solid;
+    padding: 1px;
+    font-size: 12px;
+    font-weight: normal;
+    text-decoration: none;
+    border: none
+}
+
+/*-----------------------------------*/
+.table_style_HeaderCustomerInfo {
+    background-color: white;
+    border: none;
+    width: 100%;
+    text-align: left;
+    color: black;
+    table-layout: fixed;
+    margin: 0px;
+    text-decoration: none;
+}
+
+    .table_style_HeaderCustomerInfo th {
+        border: none;
+        padding: 1px;
+        font-size: 15px;
+        font-weight: normal;
+        text-decoration: none;
+    }
+
+    .table_style_HeaderCustomerInfo td {
+        border: 1px solid;
+        padding: 1px;
+        font-size: 15px;
+        font-weight: normal;
+        text-decoration: none;
+    }
+
+    .table_style_HeaderCustomerInfo th {
+        padding-bottom: 5px;
+        padding-top: 5px;
+    }
+/*-----------------------------------*/
+.table_style3_footer {
+    background-color: white;
+    text-align: left;
+    color: black;
+    text-decoration: none;
+    table-layout: fixed;
+    margin: 0px;
+    border-top: 1px solid black;
+    max-width: 21cm;
+    bottom: -7cm;
+    position: relative;
+    /*bottom:2cm;
+    position: fixed; */
+}
+
+.footer {
+    border-style: none;
+    border-color: inherit;
+    border-width: medium;
+    height: 30px;
+    position: relative;
+    table-layout: fixed;
+    left: 0;
+    bottom: -7cm;
+    width: 100%;
+    background-color: white;
+    text-align: left;
+    color: black;
+    margin: 0px 0px 5px 0px;
+    border-collapse: collapse;
+    text-decoration: none;
+}
+
+.footer_textalign_left {
+    position: relative;
+    table-layout: fixed;
+    left: 0;
+    bottom: -7cm;
+    width: 100%;
+    background-color: white;
+    text-align: left;
+    border: none;
+    color: black;
+    margin: 0px;
+    border-collapse: collapse;
+    text-decoration: none;
+}
+
+.table_style3_footer td {
+    border: none;
+    padding: 2px;
+    font-size: 15px;
+    font-weight: normal;
+    text-decoration: none;
+}
+
+/*-----------------------------------*/
+
+.creditnote_companyname {
+    text-align: right;
+    bottom: -7cm;
+    width: 100%;
+    position: relative;
+    font-size: 15px;
+    left: 0px;
+}
+
+.creditnote_signature {
+    text-align: right;
+    bottom: -9.2cm;
+    width: 100%;
+    position: relative;
+    font-size: 15px;
+    left: -127px;
+}
+
+.table_style3_footer_Author {
+    background-color: white;
+    text-align: left;
+    color: black;
+    text-decoration: none;
+    table-layout: fixed;
+    margin: 0px;
+    border: none;
+    max-width: 21cm;
+    bottom: -7cm;
+    position: relative;
+}
+
+    .table_style3_footer_Author td {
+        border: none;
+        padding: 2px;
+        font-size: 12px;
+        font-weight: normal;
+        text-decoration: none;
+    }
+
+/*-----------------------------------*/
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+[class*="col-"] {
+    float: left;
+    padding: 2px;
+}
+/* For mobile phones: */
+[class*="col-"] {
+    width: 100%;
+}
+
+@media only screen and (min-width: 600px) {
+    /* For tablets: */
+    .col-s-1 {
+        width: 8.33%;
+    }
+
+    .col-s-2 {
+        width: 16.66%;
+    }
+
+    .col-s-3 {
+        width: 25%;
+    }
+
+    .col-s-4 {
+        width: 33.33%;
+    }
+
+    .col-s-5 {
+        width: 41.66%;
+    }
+
+    .col-s-6 {
+        width: 50%;
+    }
+
+    .col-s-7 {
+        width: 58.33%;
+    }
+
+    .col-s-8 {
+        width: 66.66%;
+    }
+
+    .col-s-9 {
+        width: 75%;
+    }
+
+    .col-s-10 {
+        width: 83.33%;
+    }
+
+    .col-s-11 {
+        width: 91.66%;
+    }
+
+    .col-s-12 {
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    /* For desktop: */
+    .col-1 {
+        width: 8.33%;
+    }
+
+    .col-2 {
+        width: 16.66%;
+    }
+
+    .col-3 {
+        width: 25%;
+    }
+
+    .col-4 {
+        width: 33.33%;
+    }
+
+    .col-5 {
+        width: 41.66%;
+    }
+
+    .col-6 {
+        width: 50%;
+    }
+
+    .col-7 {
+        width: 58.33%;
+    }
+
+    .col-8 {
+        width: 66.66%;
+    }
+
+    .col-9 {
+        width: 75%;
+    }
+
+    .col-10 {
+        width: 83.33%;
+    }
+
+    .col-11 {
+        width: 91.66%;
+    }
+
+    .col-12 {
+        width: 100%;
+    }
+}
+
+/*=============================================*/
+.mydatagrid {
+    width: 100%;
+    border: none;
+}
+    /*.mydatagrid tr:nth-child(odd){background-color: #b4b4b4;}*/
+    .mydatagrid th {
+        background-color: white;
+        font-family: Arial;
+        color: black;
+        height: 25px;
+        text-align: center;
+        font-size: 15px;
+        font-weight: bold;
+        text-decoration: none;
+    }
+
+    .mydatagrid tr {
+        background-color: white;
+        font-family: Arial;
+        font-size: 15px;
+        color: black;
+        min-height: 25px;
+        text-align: left;
+        font-weight: normal;
+        text-decoration: none;
+        vertical-align: text-top;
+    }
+
+        .mydatagrid tr:hover {
+            background-color: lightblue;
+            font-family: Arial;
+            color: black;
+            text-align: left;
+            text-decoration: none;
+        }
+
+    .mydatagrid td {
+        padding: 4px;
+        border: none;
+    }
+
+    .mydatagrid th {
+        padding: 2px;
+        border: none;
+    }
+/*------------------------------------------------------------------*/
+.gettextLabel {
+    color: black;
+    font-size: 15px;
+    text-align: left;
+    font-weight: normal;
+    word-wrap: break-word;
+}
+
+    .gettextLabel:hover {
+        background-color: lightblue;
+        color: black;
+        text-decoration: none;
+    }
+
+@page {
+    size: portrait;
+}
+
+.invoice_companyname {
+    text-align: right;
+    bottom: -7cm;
+    width: 100%;
+    position: relative;
+    font-size: 15px;
+}
+
+.table_style3_footer_EOE {
+    background-color: white;
+    text-align: right;
+    color: black;
+    text-decoration: none;
+    table-layout: fixed;
+    margin: 0px;
+    bottom: -7cm;
+    border: none;
+    max-width: 21cm;
+    position: relative;
+}
+
+.table_style4_footer_Author {
+    background-color: white;
+    text-align: left;
+    color: black;
+    text-decoration: none;
+    table-layout: fixed;
+    margin: 0px;
+    border: none;
+    max-width: 21cm;
+    bottom: -7cm;
+    position: relative;
+}
+
+.footer1 {
+    border-style: none;
+    border-color: inherit;
+    border-width: medium;
+    height: 40px;
+    position: relative;
+    table-layout: fixed;
+    left: 0;
+    bottom: -7cm;
+    width: 100%;
+    background-color: white;
+    color: black;
+    margin: 0px 0px 5px 0px;
+    border-collapse: collapse;
+    text-decoration: none;
+}
+
+.center {
+    text-align: center;
+    width: 15%;
+}
+
+.right {
+    text-align: right;
+    width: 100%;
+}
+
+.table_style_total_CN {
+    background-color: white;
+    border: none;
+    width: 100%;
+    table-layout: fixed;
+    margin: 0px;
+    border-collapse: collapse;
+    text-decoration: none;
+}
+
+.table_style3_footer_Tnc {
+    background-color: white;
+    text-align: left;
+    color: black;
+    text-decoration: none;
+    table-layout: fixed;
+    margin: 0px;
+    bottom: -7cm;
+    border: none;
+    max-width: 21cm;
+    position: relative;
+}
+
+.auto-style2 {
+    height: 60px;
+    padding-left: 30px !important;
+}
+
+.quotationfooter {
+    position: fixed;
+    bottom: 0;
+    width: 21cm;
+    background-color: #ffffff;
+    border-top: 1px solid #ddd; /* Add a border between content and footer */
+    padding: 10px;
+}
+/*
+@page {
+       
+        
+        counter-increment: page;
+
+     @bottom-right {
+        content: "Page " counter(page);
+      }
+
+    }
+
+.incrementClass:before {
+   counter-increment: page;
+}  
+*/

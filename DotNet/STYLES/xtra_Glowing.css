@@ -1,0 +1,181 @@
+﻿.glow {
+    background-color: #004A7F;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    border: none;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: bold;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.glow {
+    -webkit-animation: glowing 4s infinite;
+    -moz-animation: glowing 4s infinite;
+    -o-animation: glowing 4s infinite;
+    animation: glowing 4s infinite;
+}
+
+/*.glow:hover{
+  -webkit-animation: glowing 0.5s infinite;
+  -moz-animation: glowing 0.5s infinite;
+  -o-animation: glowing 0.5s infinite;
+  animation: glowing 0.5s infinite;
+}
+@-webkit-keyframes glowing {
+  0% { background-color: #B20000; -webkit-box-shadow: 0 0 3px #B20000; }
+  50% { background-color: #FF0000; -webkit-box-shadow: 0 0 4px #FF0000; }
+  100% { background-color: #B20000; -webkit-box-shadow: 0 0 3px #B20000; }
+}
+
+@-moz-keyframes glowing {
+  0% { background-color: #B20000; -moz-box-shadow: 0 0 3px #B20000; }
+  50% { background-color: #FF0000; -moz-box-shadow: 0 0 4px #FF0000; }
+  100% { background-color: #B20000; -moz-box-shadow: 0 0 3px #B20000; }
+}
+
+@-o-keyframes glowing {
+  0% { background-color: #B20000; box-shadow: 0 0 3px #B20000; }
+  50% { background-color: #FF0000; box-shadow: 0 0 4px #FF0000; }
+  100% { background-color: #B20000; box-shadow: 0 0 3px #B20000; }
+}
+
+@keyframes glowing {
+  0% { background-color: #B20000; box-shadow: 0 0 3px #B20000; }
+  50% { background-color: #FF0000; box-shadow: 0 0 4px #FF0000; }
+  100% { background-color: #B20000; box-shadow: 0 0 3px #B20000; }
+}*/
+/*====================================================================================*/
+.glow_green {
+    background-color: #2c4c3b;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    border: none;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: bold;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.glow_orange {
+    background-color: #f58345;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    border: none;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: bold;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.glow_yellow {
+    background-color: #17a2b8;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    border: none;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: bold;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.glow_red {
+    background-color: #800000;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    border: none;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: bold;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+}
+
+/*.glow_green{
+  -webkit-animation: glowing_green 4s infinite;
+  -moz-animation: glowing_green 4s infinite;
+  -o-animation: glowing_green 4s infinite;
+  animation: glowing_green 4s infinite;
+}
+
+.glow_green:hover{
+  -webkit-animation: glowing_green 0.5s infinite;
+  -moz-animation: glowing_green 0.5s infinite;
+  -o-animation: glowing_green 0.5s infinite;
+  animation: glowing_green 0.5s infinite;
+}
+
+
+@-webkit-keyframes glowing_green {
+  0% { background-color: #306844; -webkit-box-shadow: 0 0 3px #306844	; }
+  50% { background-color: #1e453e	; -webkit-box-shadow: 0 0 4px #1e453e	; }
+  100% { background-color: #306844	; -webkit-box-shadow: 0 0 3px #306844	; }
+}
+
+@-moz-keyframes glowing_green {
+  0% { background-color: #306844	; -moz-box-shadow: 0 0 3px #306844	; }
+  50% { background-color: #1e453e	; -moz-box-shadow: 0 0 4px #1e453e	; }
+  100% { background-color: #306844	; -moz-box-shadow: 0 0 3px #306844	; }
+}
+
+@-o-keyframes glowing_green {
+  0% { background-color: #306844	; box-shadow: 0 0 3px #306844	; }
+  50% { background-color: #1e453e	; box-shadow: 0 0 4px #1e453e	; }
+  100% { background-color: #306844	; box-shadow: 0 0 3px #306844	; }
+}
+
+@keyframes glowing_green {
+  0% { background-color: #306844	; box-shadow: 0 0 3px #306844	; }
+  50% { background-color: #1e453e	; box-shadow: 0 0 4px #1e453e	; }
+  100% { background-color: #306844	; box-shadow: 0 0 3px #306844	; }
+}*/
+@media only screen and (min-width: 600px) {
+    /* For tablets: */
+}
+
+@media only screen and (min-width: 768px) {
+    /* For desktop: */
+    .glow {
+        font-size: 16px;
+    }
+
+    .glow_green {
+        font-size: 16px;
+    }
+
+    .glow_red {
+        font-size: 16px;
+    }
+
+    .getStatement {
+        font-size: 16px;
+    }
+}
+
+.getStatement {
+    background-color: #f58345;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    border: none;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: bold;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+}

@@ -1,0 +1,43 @@
+﻿* {box-sizing: border-box}
+/* Set height of body and the document to 100% */
+html,body {
+   
+  height: 100%;
+  margin: 0;
+  
+}
+
+/* Style tab links */
+.tablink {
+  background-color: #1F2833;
+  color:  ;
+  float: left;
+
+  border:1px solid #66FCF1;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 33.33%;font-weight: bold;margin:0;
+}
+
+.tablink:hover {
+  background-color: #C5C6C7;
+
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+  border:1px solid #66FCF1;
+  display: none;
+  padding: 100px 20px;margin-top:45px;width:100%;/*margin*/
+  min-height:100%; position: absolute;
+
+  color:  ;
+}
+
+
+#Customer {background-color: #45A29E;}
+#Delivery {background-color: #45A29E;}
+#Sales_Order {background-color: #45A29E;}
+

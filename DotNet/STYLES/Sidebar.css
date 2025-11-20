@@ -1,0 +1,47 @@
+﻿.sidebar {
+    width: 225px;
+    background-color: aliceblue;
+    padding: 20px;
+    color: black;
+    position: fixed;
+    height: 100%;
+    overflow-y: auto;
+    top: 0;
+    left: 0;
+}
+
+
+
+
+.header1 {
+    /* Your existing header styles */
+    /* Adjust the margin-left to create space for the fixed sidebar */
+    margin-left: 275px;
+}
+
+
+.content {
+    margin-left: 270px;
+    padding: 20px;
+    color: black;
+    overflow: auto;
+    max-height: 100%;
+}
+
+.button {
+
+    margin-bottom: 10px;
+
+    color: black;
+    border: none;
+    cursor: pointer;
+}
+
+    .button:hover {
+        background-color: #0056b3;
+    }
+
+.function {
+    margin-left: 100px;
+    margin-right: auto;
+}

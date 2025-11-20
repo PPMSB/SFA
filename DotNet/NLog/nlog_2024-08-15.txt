@@ -1,0 +1,51 @@
+2024-08-15 13:54:23.5420|INFO|DotNetSync.lhdn.EInvoiceDashboard|Get outbount invoice count (LF_Status == 3)
+2024-08-15 13:54:24.3563|INFO|DotNetSync.lhdn.EInvoiceDashboard|Get outbount invoice count (LF_Status == 0)
+2024-08-15 13:54:24.8618|INFO|DotNetSync.lhdn.EInvoiceDashboard|Get outbount invoice count (LF_Status == 2)
+2024-08-15 13:54:25.3620|INFO|DotNetSync.lhdn.EInvoiceDashboard|Get outbount invoice count (LF_Status == 5)
+2024-08-15 13:54:25.8772|INFO|DotNetSync.lhdn.EInvoiceDashboard|Get outbount invoice count (LF_Status == 4)
+2024-08-15 13:54:38.2995|INFO|DotNetSync.lhdn.EInvoiceDashboard|Get outbount invoice count (LF_Status == 0)
+2024-08-15 13:54:38.8032|INFO|DotNetSync.lhdn.EInvoiceDashboard|Get outbount invoice count (LF_Status == 2)
+2024-08-15 13:54:39.3127|INFO|DotNetSync.lhdn.EInvoiceDashboard|Get outbount invoice count (LF_Status == 3)
+2024-08-15 13:54:39.8608|INFO|DotNetSync.lhdn.EInvoiceDashboard|Get outbount invoice count (LF_Status == 4)
+2024-08-15 13:54:40.3613|INFO|DotNetSync.lhdn.EInvoiceDashboard|Get outbount invoice count (LF_Status == 5)
+2024-08-15 14:03:50.2667|INFO|DotNetSync.lhdn.EInvoiceDashboard|Get outbount invoice count (LF_Status == 0)
+2024-08-15 14:03:51.0776|INFO|DotNetSync.lhdn.EInvoiceDashboard|Get outbount invoice count (LF_Status == 5)
+2024-08-15 14:03:51.5924|INFO|DotNetSync.lhdn.EInvoiceDashboard|Get outbount invoice count (LF_Status == 2)
+2024-08-15 14:03:52.0937|INFO|DotNetSync.lhdn.EInvoiceDashboard|Get outbount invoice count (LF_Status == 3)
+2024-08-15 14:03:52.5939|INFO|DotNetSync.lhdn.EInvoiceDashboard|Get outbount invoice count (LF_Status == 4)
+2024-08-15 14:04:14.1812|INFO|DotNetSync.lhdn.EInvoiceInvoiceList|Getting outbound list
+2024-08-15 14:04:16.4240|INFO|DotNetSync.lhdn.EInvoiceInvoiceList|1991 rows selected for ComRegNo: PPM
+2024-08-15 14:05:10.0978|INFO|DotNetSync.lhdn.EInvoiceInvoiceList|Getting outbound list
+2024-08-15 14:05:10.2906|INFO|DotNetSync.lhdn.EInvoiceInvoiceList|119 rows selected for ComRegNo: PPM
+2024-08-15 14:05:23.9677|INFO|DotNetSync.lhdn.EInvoiceInvoiceList|Getting outbound list
+2024-08-15 14:05:25.9116|INFO|DotNetSync.lhdn.EInvoiceInvoiceList|1992 rows selected for ComRegNo: PPM
+2024-08-15 14:05:26.4413|INFO|DotNetSync.lhdn.EInvoiceDashboard|Get outbount invoice count (LF_Status == 2)
+2024-08-15 14:05:26.9463|INFO|DotNetSync.lhdn.EInvoiceDashboard|Get outbount invoice count (LF_Status == 5)
+2024-08-15 14:05:27.4769|INFO|DotNetSync.lhdn.EInvoiceDashboard|Get outbount invoice count (LF_Status == 3)
+2024-08-15 14:05:27.9875|INFO|DotNetSync.lhdn.EInvoiceDashboard|Get outbount invoice count (LF_Status == 4)
+2024-08-15 14:05:28.5438|INFO|DotNetSync.lhdn.EInvoiceDashboard|Get outbount invoice count (LF_Status == 0)
+2024-08-15 14:19:51.0384|INFO|DotNetSync.lhdn.EInvoiceDashboard|Get outbount invoice count (LF_Status == 0)
+2024-08-15 14:19:51.8622|INFO|DotNetSync.lhdn.EInvoiceDashboard|Get outbount invoice count (LF_Status == 3)
+2024-08-15 14:19:52.3748|INFO|DotNetSync.lhdn.EInvoiceDashboard|Get outbount invoice count (LF_Status == 5)
+2024-08-15 14:19:52.8756|INFO|DotNetSync.lhdn.EInvoiceDashboard|Get outbount invoice count (LF_Status == 4)
+2024-08-15 14:19:53.3747|INFO|DotNetSync.lhdn.EInvoiceDashboard|Get outbount invoice count (LF_Status == 2)
+2024-08-15 14:21:47.0931|INFO|DotNetSync.lhdn.EInvoiceDashboard|Get outbount invoice count (LF_Status == 2)
+2024-08-15 14:21:47.9117|INFO|DotNetSync.lhdn.EInvoiceDashboard|Get outbount invoice count (LF_Status == 3)
+2024-08-15 14:21:48.4137|INFO|DotNetSync.lhdn.EInvoiceDashboard|Get outbount invoice count (LF_Status == 5)
+2024-08-15 14:21:48.9150|INFO|DotNetSync.lhdn.EInvoiceDashboard|Get outbount invoice count (LF_Status == 0)
+2024-08-15 14:21:49.4163|INFO|DotNetSync.lhdn.EInvoiceDashboard|Get outbount invoice count (LF_Status == 4)
+2024-08-15 14:22:15.5756|INFO|DotNetSync.lhdn.EInvoiceInvoiceList|Getting outbound list
+2024-08-15 14:23:36.8010|INFO|DotNetSync.lhdn.EInvoiceInvoiceList|1112 rows selected for ComRegNo: PPM
+2024-08-15 14:24:50.7462|INFO|DotNetSync.lhdn.EInvoiceInvoiceList|Getting outbound list
+2024-08-15 14:24:59.3339|INFO|DotNetSync.lhdn.EInvoiceInvoiceList|1112 rows selected for ComRegNo: PPM
+2024-08-15 14:26:00.5604|INFO|DotNetSync.lhdn.EInvoiceInvoiceList|Getting outbound list
+2024-08-15 14:26:01.6535|INFO|DotNetSync.lhdn.EInvoiceInvoiceList|1112 rows selected for ComRegNo: PPM
+2024-08-15 14:32:54.7303|INFO|DotNetSync.lhdn.EInvoiceDashboard|Get outbount invoice count (LF_Status == 0)
+2024-08-15 14:32:55.5578|INFO|DotNetSync.lhdn.EInvoiceDashboard|Get outbount invoice count (LF_Status == 5)
+2024-08-15 14:32:56.0577|INFO|DotNetSync.lhdn.EInvoiceDashboard|Get outbount invoice count (LF_Status == 4)
+2024-08-15 14:32:56.5585|INFO|DotNetSync.lhdn.EInvoiceDashboard|Get outbount invoice count (LF_Status == 3)
+2024-08-15 14:32:57.0647|INFO|DotNetSync.lhdn.EInvoiceDashboard|Get outbount invoice count (LF_Status == 2)
+2024-08-15 14:33:07.4993|INFO|DotNetSync.lhdn.EInvoiceInvoiceList|Getting outbound list
+2024-08-15 14:33:09.4655|INFO|DotNetSync.lhdn.EInvoiceInvoiceList|2002 rows selected for ComRegNo: PPM
+2024-08-15 14:33:29.4746|INFO|DotNetSync.lhdn.EInvoiceInvoiceList|Getting outbound list
+2024-08-15 14:33:30.0069|INFO|DotNetSync.lhdn.EInvoiceInvoiceList|89 rows selected for ComRegNo: PPM

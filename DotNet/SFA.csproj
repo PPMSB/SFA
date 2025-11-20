@@ -1,0 +1,1487 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.Net.Compilers.4.2.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.4.2.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{DC54EC6E-E9C8-4C5F-BB65-5E147D6DB2FD}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DotNet</RootNamespace>
+    <AssemblyName>DotNet</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <Use64BitIISExpress>false</Use64BitIISExpress>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <LangVersion>default</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <LangVersion>6.0</LangVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Cryptography, Version=2.0.0.0, Culture=neutral, PublicKeyToken=072edcf4a5328938, processorArchitecture=MSIL">
+      <HintPath>..\packages\BouncyCastle.Cryptography.2.3.1\lib\net461\BouncyCastle.Cryptography.dll</HintPath>
+    </Reference>
+    <Reference Include="DinkToPdf, Version=1.0.8.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\DinkToPdf.1.0.8\lib\netstandard1.6\DinkToPdf.dll</HintPath>
+    </Reference>
+    <Reference Include="Enums.NET, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7ea1c1650d506225, processorArchitecture=MSIL">
+      <HintPath>..\packages\Enums.NET.4.0.1\lib\net45\Enums.NET.dll</HintPath>
+    </Reference>
+    <Reference Include="EPPlus, Version=8.0.1.0, Culture=neutral, PublicKeyToken=ea159fdaa78159a1, processorArchitecture=MSIL">
+      <HintPath>..\packages\EPPlus.8.0.1\lib\net462\EPPlus.dll</HintPath>
+    </Reference>
+    <Reference Include="EPPlus.Interfaces, Version=8.0.0.0, Culture=neutral, PublicKeyToken=a694d7f3b0907a61, processorArchitecture=MSIL">
+      <HintPath>..\packages\EPPlus.Interfaces.8.0.0\lib\net462\EPPlus.Interfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="EPPlus.System.Drawing, Version=8.0.0.0, Culture=neutral, PublicKeyToken=2308d35469c9bac0, processorArchitecture=MSIL">
+      <HintPath>..\packages\EPPlus.System.Drawing.8.0.0\lib\net462\EPPlus.System.Drawing.dll</HintPath>
+    </Reference>
+    <Reference Include="ExtendedNumerics.BigDecimal, Version=2025.1001.2.129, Culture=neutral, PublicKeyToken=65f1315a45ad8949, processorArchitecture=MSIL">
+      <HintPath>..\packages\ExtendedNumerics.BigDecimal.2025.1001.2.129\lib\net472\ExtendedNumerics.BigDecimal.dll</HintPath>
+    </Reference>
+    <Reference Include="HtmlToPdfConverter, Version=1.0.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\HtmlToPdfConverter.1.0.2\lib\netstandard2.0\HtmlToPdfConverter.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=1.4.2.13, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
+      <HintPath>..\packages\SharpZipLib.1.4.2\lib\netstandard2.0\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="itext.barcodes, Version=9.1.0.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\itext.9.1.0\lib\net461\itext.barcodes.dll</HintPath>
+    </Reference>
+    <Reference Include="itext.bouncy-castle-connector, Version=9.1.0.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\itext.9.1.0\lib\net461\itext.bouncy-castle-connector.dll</HintPath>
+    </Reference>
+    <Reference Include="itext.commons, Version=9.1.0.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\itext.commons.9.1.0\lib\net461\itext.commons.dll</HintPath>
+    </Reference>
+    <Reference Include="itext.forms, Version=9.1.0.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\itext.9.1.0\lib\net461\itext.forms.dll</HintPath>
+    </Reference>
+    <Reference Include="itext.io, Version=9.1.0.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\itext.9.1.0\lib\net461\itext.io.dll</HintPath>
+    </Reference>
+    <Reference Include="itext.kernel, Version=9.1.0.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\itext.9.1.0\lib\net461\itext.kernel.dll</HintPath>
+    </Reference>
+    <Reference Include="itext.layout, Version=9.1.0.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\itext.9.1.0\lib\net461\itext.layout.dll</HintPath>
+    </Reference>
+    <Reference Include="itext.pdfa, Version=9.1.0.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\itext.9.1.0\lib\net461\itext.pdfa.dll</HintPath>
+    </Reference>
+    <Reference Include="itext.pdfua, Version=9.1.0.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\itext.9.1.0\lib\net461\itext.pdfua.dll</HintPath>
+    </Reference>
+    <Reference Include="itext.sign, Version=9.1.0.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\itext.9.1.0\lib\net461\itext.sign.dll</HintPath>
+    </Reference>
+    <Reference Include="itext.styledxmlparser, Version=9.1.0.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\itext.9.1.0\lib\net461\itext.styledxmlparser.dll</HintPath>
+    </Reference>
+    <Reference Include="itext.svg, Version=9.1.0.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\itext.9.1.0\lib\net461\itext.svg.dll</HintPath>
+    </Reference>
+    <Reference Include="MathNet.Numerics, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cd8b63ad3d691a37, processorArchitecture=MSIL">
+      <HintPath>..\packages\MathNet.Numerics.Signed.5.0.0\lib\net461\MathNet.Numerics.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.Agent.Intercept, Version=2.4.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.2.4.0\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.DependencyCollector, Version=2.21.0.429, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.DependencyCollector.2.21.0\lib\net452\Microsoft.AI.DependencyCollector.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.PerfCounterCollector, Version=2.21.0.429, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.PerfCounterCollector.2.21.0\lib\net452\Microsoft.AI.PerfCounterCollector.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.ServerTelemetryChannel, Version=2.21.0.429, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.21.0\lib\net452\Microsoft.AI.ServerTelemetryChannel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.Web, Version=2.21.0.429, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Web.2.21.0\lib\net452\Microsoft.AI.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.WindowsServer, Version=2.21.0.429, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.2.21.0\lib\net452\Microsoft.AI.WindowsServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationInsights, Version=2.21.0.429, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.2.21.0\lib\net46\Microsoft.ApplicationInsights.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.TelemetryCorrelation, Version=1.0.8.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.TelemetryCorrelation.1.0.8\lib\net45\Microsoft.AspNet.TelemetryCorrelation.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.Http.Abstractions, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNetCore.Http.Abstractions.2.2.0\lib\netstandard2.0\Microsoft.AspNetCore.Http.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.Http.Features, Version=5.0.17.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNetCore.Http.Features.5.0.17\lib\net461\Microsoft.AspNetCore.Http.Features.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.Mvc.Abstractions, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNetCore.Mvc.Abstractions.2.2.0\lib\netstandard2.0\Microsoft.AspNetCore.Mvc.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.Routing.Abstractions, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNetCore.Routing.Abstractions.2.2.0\lib\netstandard2.0\Microsoft.AspNetCore.Routing.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.5.0.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=3.6.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Dynamics.BusinessConnectorNet">
+      <HintPath>..\..\DotNet v47 - OriginalBak\packages\AxBusinessConnector.1.0.1\lib\net20\x86\Microsoft.Dynamics.BusinessConnectorNet.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.DependencyInjection.5.0.0\lib\net461\Microsoft.Extensions.DependencyInjection.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection.Abstractions, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.DependencyInjection.Abstractions.5.0.0\lib\net461\Microsoft.Extensions.DependencyInjection.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Logging.5.0.0\lib\net461\Microsoft.Extensions.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging.Abstractions, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Logging.Abstractions.5.0.0\lib\net461\Microsoft.Extensions.Logging.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Options, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Options.5.0.0\lib\net461\Microsoft.Extensions.Options.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Primitives, Version=7.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Primitives.7.0.0\lib\net462\Microsoft.Extensions.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IO.RecyclableMemoryStream, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IO.RecyclableMemoryStream.3.0.1\lib\netstandard2.0\Microsoft.IO.RecyclableMemoryStream.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Net.Http.Headers, Version=2.2.8.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Net.Http.Headers.2.2.8\lib\netstandard2.0\Microsoft.Net.Http.Headers.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Win32.Primitives, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Win32.Primitives.4.0.1\lib\net46\Microsoft.Win32.Primitives.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MySql.Data, Version=8.0.18.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json.Bson, Version=1.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.Bson.1.0.2\lib\net45\Newtonsoft.Json.Bson.dll</HintPath>
+    </Reference>
+    <Reference Include="NLog, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
+      <HintPath>..\packages\NLog.6.0.0\lib\net46\NLog.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.Core, Version=2.7.3.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\NPOI.2.7.3\lib\net472\NPOI.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OOXML, Version=2.7.3.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\NPOI.2.7.3\lib\net472\NPOI.OOXML.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXml4Net, Version=2.7.3.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\NPOI.2.7.3\lib\net472\NPOI.OpenXml4Net.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXmlFormats, Version=2.7.3.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\NPOI.2.7.3\lib\net472\NPOI.OpenXmlFormats.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="QRCoder">
+      <HintPath>C:\Users\Administrator\Desktop\New folder\lib\net40\QRCoder.dll</HintPath>
+    </Reference>
+    <Reference Include="Select.HtmlToPdf, Version=25.1.0.0, Culture=neutral, PublicKeyToken=e0ae9f6e27a97018, processorArchitecture=MSIL">
+      <HintPath>..\packages\Select.HtmlToPdf.25.1.0\lib\net40\Select.HtmlToPdf.dll</HintPath>
+    </Reference>
+    <Reference Include="SixLabors.Fonts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=d998eea7b14cab13, processorArchitecture=MSIL">
+      <HintPath>..\packages\SixLabors.Fonts.1.0.1\lib\netstandard2.0\SixLabors.Fonts.dll</HintPath>
+    </Reference>
+    <Reference Include="SixLabors.ImageSharp, Version=2.0.0.0, Culture=neutral, PublicKeyToken=d998eea7b14cab13, processorArchitecture=MSIL">
+      <HintPath>..\packages\SixLabors.ImageSharp.2.1.10\lib\net472\SixLabors.ImageSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Compression.NET, Version=29.2.11.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Syncfusion.Compression.NET.29.2.11\lib\netstandard2.0\Syncfusion.Compression.NET.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Licensing, Version=29.2462.11.0, Culture=neutral, PublicKeyToken=632609b4d040f6b4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Syncfusion.Licensing.29.2.11\lib\net462\Syncfusion.Licensing.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Pdf.NET, Version=29.2.11.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Syncfusion.Pdf.NET.29.2.11\lib\netstandard2.0\Syncfusion.Pdf.NET.dll</HintPath>
+    </Reference>
+    <Reference Include="System.AppContext, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.AppContext.4.1.0\lib\net463\System.AppContext.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.Annotations, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ComponentModel.Annotations.5.0.0\lib\net461\System.ComponentModel.Annotations.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Console, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Console.4.0.0\lib\net46\System.Console.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Diagnostics.DiagnosticSource, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Diagnostics.DiagnosticSource.5.0.0\lib\net46\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Diagnostics.Tracing, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Diagnostics.Tracing.4.1.0\lib\net462\System.Diagnostics.Tracing.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Drawing.Common, Version=9.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Drawing.Common.9.0.1\lib\net462\System.Drawing.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Globalization.Calendars, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Globalization.Calendars.4.0.1\lib\net46\System.Globalization.Calendars.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.IO, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.4.1.0\lib\net462\System.IO.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.IO.Compression, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.Compression.4.1.0\lib\net46\System.IO.Compression.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.IO.Compression.FileSystem" />
+    <Reference Include="System.IO.Compression.ZipFile, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.Compression.ZipFile.4.0.1\lib\net46\System.IO.Compression.ZipFile.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.IO.FileSystem, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.FileSystem.4.0.1\lib\net46\System.IO.FileSystem.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.IO.FileSystem.Primitives, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.FileSystem.Primitives.4.0.1\lib\net46\System.IO.FileSystem.Primitives.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.IO.Pipelines, Version=5.0.0.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.Pipelines.5.0.2\lib\net461\System.IO.Pipelines.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Linq, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Linq.4.1.0\lib\net463\System.Linq.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Linq.Expressions, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Linq.Expressions.4.1.0\lib\net463\System.Linq.Expressions.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Management" />
+    <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Net.Http.4.1.0\lib\net46\System.Net.Http.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting, Version=6.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.6.0.0\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Sockets, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Net.Sockets.4.1.0\lib\net46\System.Net.Sockets.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reflection, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Reflection.4.3.0\lib\net462\System.Reflection.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Reflection.TypeExtensions, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Reflection.TypeExtensions.4.3.0\lib\net462\System.Reflection.TypeExtensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime, Version=4.1.1.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.4.3.1\lib\net462\System.Runtime.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Caching" />
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Extensions, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.Extensions.4.1.0\lib\net462\System.Runtime.Extensions.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.InteropServices, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.InteropServices.4.3.0\lib\net463\System.Runtime.InteropServices.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.InteropServices.RuntimeInformation, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.InteropServices.RuntimeInformation.4.0.0\lib\net45\System.Runtime.InteropServices.RuntimeInformation.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security" />
+    <Reference Include="System.Security.Cryptography.Algorithms, Version=4.2.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Algorithms.4.2.0\lib\net463\System.Security.Cryptography.Algorithms.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Encoding, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Encoding.4.0.0\lib\net46\System.Security.Cryptography.Encoding.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Pkcs, Version=8.0.0.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Pkcs.8.0.1\lib\net462\System.Security.Cryptography.Pkcs.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Primitives, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Primitives.4.0.0\lib\net46\System.Security.Cryptography.Primitives.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.X509Certificates, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.X509Certificates.4.1.0\lib\net461\System.Security.Cryptography.X509Certificates.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Xml, Version=8.0.0.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Xml.8.0.2\lib\net462\System.Security.Cryptography.Xml.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Encoding.CodePages, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Encoding.CodePages.6.0.0\lib\net461\System.Text.Encoding.CodePages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Encodings.Web, Version=7.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Encodings.Web.7.0.0\lib\net462\System.Text.Encodings.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.RegularExpressions, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.RegularExpressions.4.1.0\lib\net463\System.Text.RegularExpressions.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Thread, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Thread.4.0.0\lib\net46\System.Threading.Thread.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.Cors, Version=5.3.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Cors.5.3.0\lib\net45\System.Web.Cors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Http, Version=5.3.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.3.0\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.Cors, Version=5.3.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Cors.5.3.0\lib\net45\System.Web.Http.Cors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=5.3.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.3.0\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="zxing, Version=0.16.8.0, Culture=neutral, PublicKeyToken=4e88037ac681fe60, processorArchitecture=MSIL">
+      <HintPath>..\packages\ZXing.Net.0.16.8\lib\net47\zxing.dll</HintPath>
+    </Reference>
+    <Reference Include="zxing.presentation, Version=0.16.8.0, Culture=neutral, PublicKeyToken=4e88037ac681fe60, processorArchitecture=MSIL">
+      <HintPath>..\packages\ZXing.Net.0.16.8\lib\net47\zxing.presentation.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AddApplication.aspx" />
+    <Content Include="AddExistCust.aspx" />
+    <Content Include="AddExistingCustomer.aspx" />
+    <Content Include="AddUser.aspx" />
+    <Content Include="Campaign.aspx" />
+    <Content Include="Campaign_CreateNewOffer.aspx" />
+    <Content Include="Campaign_DocumentPDF.aspx" />
+    <Content Include="Campaign_Email.aspx" />
+    <Content Include="Campaign_MainMenu.aspx" />
+    <Content Include="Campaign_SubmitForm.aspx" />
+    <Content Include="CompanyReport.aspx" />
+    <Content Include="Content\bootstrap-datetimepicker.min.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\dataTables.bootstrap.css" />
+    <Content Include="CustomerMaster_Online_Report.aspx" />
+    <Content Include="DraftCustomerGPS.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="MapCustList.aspx" />
+    <Content Include="NativeLibs\X64\libwkhtmltox.dll" />
+    <Content Include="NewProductHomePage.aspx" />
+    <Content Include="NewProductRequest.aspx" />
+    <Content Include="pod\WebPod.aspx" />
+    <Content Include="PrintingLayout.aspx" />
+    <Content Include="RESOURCES\ADDQUOTATION.png" />
+    <Content Include="RESOURCES\Appointment.png" />
+    <Content Include="RESOURCES\BackToSFA.png" />
+    <Content Include="RESOURCES\Campaign.jpg" />
+    <Content Include="RESOURCES\CampaignReport.png" />
+    <Content Include="RESOURCES\CreateNew.jfif" />
+    <Content Include="RESOURCES\CreateNew.png" />
+    <Content Include="RESOURCES\Download.png" />
+    <Content Include="RESOURCES\DownloadVPPPInformation.png" />
+    <Content Include="RESOURCES\EInvoice.png" />
+    <Content Include="RESOURCES\Equipment.png" />
+    <Content Include="RESOURCES\HirevLogo.jpeg" />
+    <Content Include="RESOURCES\History.png" />
+    <Content Include="RESOURCES\NewForm.png" />
+    <Content Include="RESOURCES\PosimNewLogo.jpeg" />
+    <Content Include="RESOURCES\SubmitForm.png" />
+    <Content Include="RESOURCES\VMS.png" />
+    <Content Include="RESOURCES\WebPOD.jpg" />
+    <Content Include="RESOURCES\WebPOD.png" />
+    <Content Include="RocTin.aspx" />
+    <Content Include="EventBudget.aspx" />
+    <Content Include="GatePass.aspx" />
+    <Content Include="Map3.aspx" />
+    <Content Include="NewCustomer.aspx" />
+    <Content Include="NewCustomerApproval.aspx" />
+    <Content Include="RedempApprovalList.aspx" />
+    <Content Include="ApprovalList.aspx" />
+    <Content Include="Battery.aspx" />
+    <Content Include="ChangePassword.aspx" />
+    <Content Include="CheckIn.aspx" />
+    <Content Include="CheckInRecord.aspx" />
+    <Content Include="Content\bootstrap-datepicker.min.css" />
+    <Content Include="Content\bootstrap-glyphicons.css" />
+    <Content Include="Content\custom.css" />
+    <Content Include="Content\font-awesome.min.css" />
+    <Content Include="Content\form_custom.css" />
+    <Content Include="CustomerMaster.aspx" />
+    <Content Include="DownloadFile.aspx" />
+    <Content Include="EmailApplicant.aspx" />
+    <Content Include="EOR.aspx" />
+    <Content Include="ForgotPwd.aspx" />
+    <Content Include="InventoryMaster.aspx" />
+    <Content Include="LoginPage.aspx" />
+    <Content Include="QuotationLayout.aspx" />
+    <Content Include="MainMenu.aspx" />
+    <Content Include="packages.config" />
+    <Content Include="ApplicationInsights.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="DotNetPassword.pfx" />
+    <Content Include="Redemption_OutBalance.aspx" />
+    <Content Include="RESOURCES\ADDJOURNALLINE.png" />
+    <Content Include="RESOURCES\ADDSALESLINE.png" />
+    <Content Include="RESOURCES\AddUser.png" />
+    <Content Include="RESOURCES\APPROVALGROUP.png" />
+    <Content Include="RESOURCES\Battery.png" />
+    <Content Include="RESOURCES\bgw1.jpg" />
+    <Content Include="RESOURCES\CHECKINN.png" />
+    <Content Include="RESOURCES\Customert.png" />
+    <Content Include="RESOURCES\DELIVERY.png" />
+    <Content Include="RESOURCES\edit.png" />
+    <Content Include="RESOURCES\EditProfile.png" />
+    <Content Include="RESOURCES\EORR.png" />
+    <Content Include="RESOURCES\EVENTBUDGET.png" />
+    <Content Include="RESOURCES\FAVOURITE.png" />
+    <Content Include="RESOURCES\Hirev.jpg" />
+    <Content Include="RESOURCES\hover-xls-export-50.png" />
+    <Content Include="RESOURCES\HOVERFRAME.png" />
+    <Content Include="RESOURCES\icons8-xls-export-50.png" />
+    <Content Include="RESOURCES\Inventoryy.png" />
+    <Content Include="RESOURCES\LFIB_logo3.jpg" />
+    <Content Include="RESOURCES\LOCATION.png" />
+    <Content Include="RESOURCES\Lubricant.png" />
+    <Content Include="RESOURCES\NavSeperator.png" />
+    <Content Include="RESOURCES\NewCustApproval.png" />
+    <Content Include="RESOURCES\New_Customer.png" />
+    <Content Include="RESOURCES\PAYMENTT.png" />
+    <Content Include="RESOURCES\PBM bg white.gif" />
+    <Content Include="RESOURCES\PinPoint.png" />
+    <Content Include="RESOURCES\POSIM PETROLEUM MARKETING.png" />
+    <Content Include="RESOURCES\PPM bg white.gif" />
+    <Content Include="RESOURCES\PRINT.png" />
+    <Content Include="RESOURCES\REDEMPAPPROVAL.png" />
+    <Content Include="RESOURCES\Redemptionn.png" />
+    <Content Include="RESOURCES\SALES FORCE.png" />
+    <Content Include="RESOURCES\SearchIcon.png" />
+    <Content Include="RESOURCES\Settingg.png" />
+    <Content Include="RESOURCES\SmallFrame.png" />
+    <Content Include="RESOURCES\SQ.png" />
+    <Content Include="RESOURCES\WARRANTY CLAIM.png" />
+    <Content Include="RESOURCES\WARRANTYAPPROVAL.png" />
+    <Content Include="SalesReportGroupMonthly_PBM.aspx" />
+    <Content Include="SalesReportGroupMonthly.aspx" />
+    <Content Include="SalesReport_OtherDiv.aspx" />
+    <Content Include="SalesReportGroup_PBM.aspx" />
+    <Content Include="SalesReport_PBM.aspx" />
+    <Content Include="SalesReport.aspx" />
+    <Content Include="SalesReportGroup.aspx" />
+    <Content Include="scripts\bootstrap-datetimepicker.js" />
+    <Content Include="scripts\bootstrap.bundle.js" />
+    <Content Include="scripts\bootstrap.bundle.min.js" />
+    <Content Include="scripts\bootstrap.esm.js" />
+    <Content Include="scripts\bootstrap.esm.min.js" />
+    <Content Include="scripts\bootstrap.js" />
+    <Content Include="scripts\dataTables.bootstrap4.min.js" />
+    <Content Include="scripts\moment.min.js" />
+    <Content Include="SignboardEquipment.aspx" />
+    <Content Include="SignboardEquipment_ApprovalList.aspx" />
+    <Content Include="SignBoardForm.aspx" />
+    <Content Include="STYLES\AddAccStyle.css" />
+    <Content Include="STYLES\bootstrap.min.css" />
+    <Content Include="STYLES\DraftCust.css" />
+    <Content Include="STYLES\font-awesome.min.css" />
+    <Content Include="scripts\jquery.min.js" />
+    <Content Include="scripts\jquery\bootstrap-datepicker.js" />
+    <Content Include="scripts\jquery\bootstrap-datepicker.min.js" />
+    <Content Include="scripts\jquery\datatables.js" />
+    <Content Include="scripts\jquery\fullcalendar.js" />
+    <Content Include="scripts\jquery\jquery-ui-1.8.18.custom.min.js" />
+    <Content Include="scripts\jquery\jquery.min.js" />
+    <Content Include="scripts\select2.min.js" />
+    <Content Include="scripts\WebCamSetup.js" />
+    <Content Include="Redemption.aspx" />
+    <Content Include="NLog.config" />
+    <Content Include="Visitor_ChangePassword.aspx" />
+    <Content Include="Visitor_CheckInOut.aspx" />
+    <Content Include="Visitor_CheckInOutQRCode.aspx" />
+    <Content Include="Visitor_CreateNewAppointment.aspx" />
+    <Content Include="Visitor_GuestAppointment.aspx" />
+    <Content Include="Visitor_History.aspx" />
+    <Content Include="Visitor_Login.aspx" />
+    <Content Include="Visitor_MainMenu.aspx" />
+    <Content Include="Visitor_SecurityGuard.aspx" />
+    <Content Include="Warranty\WClaim_BatteryList.aspx" />
+    <Content Include="WeeklySalesReportGroupForPoonsh.aspx" />
+    <Content Include="Campaign_Site.Master" />
+    <Content Include="NativeLibs\X64\libwkhtmltox.so" />
+    <Content Include="NativeLibs\X64\libwkhtmltox.dylib" />
+    <Content Include="Handler\ImageHandler.ashx" />
+    <None Include="NLog.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\PublishProfiles\publishDotNet.pubxml" />
+    <Content Include="scripts\bootstrap.min.js.map" />
+    <Content Include="scripts\bootstrap.js.map" />
+    <Content Include="scripts\bootstrap.esm.min.js.map" />
+    <Content Include="scripts\bootstrap.esm.js.map" />
+    <Content Include="scripts\bootstrap.bundle.min.js.map" />
+    <Content Include="scripts\bootstrap.bundle.js.map" />
+    <Content Include="RESOURCES\VPPPCampaign\1. Incentive Factor WEF July 2020.pdf" />
+    <Content Include="RESOURCES\VPPPCampaign\VPPP - 2W Product Grouping 130720.pdf" />
+    <Content Include="RESOURCES\VPPPCampaign\VPPP - 4W Product Grouping 130720.pdf" />
+    <Content Include="Site.Master" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Payment.aspx" />
+    <Content Include="RESOURCES\Connect.jpg" />
+    <Content Include="RESOURCES\forgot_pw.png" />
+    <Content Include="RESOURCES\LFIB_icon.ico" />
+    <Content Include="RESOURCES\line.png" />
+    <Content Include="RESOURCES\loading.gif" />
+    <Content Include="RESOURCES\not_ok.png" />
+    <Content Include="RESOURCES\ok.png" />
+    <Content Include="RESOURCES\OptionA.png" />
+    <Content Include="RESOURCES\OptionA_h.png" />
+    <Content Include="RESOURCES\OptionB.png" />
+    <Content Include="RESOURCES\OptionB_h.png" />
+    <Content Include="RESOURCES\user.png" />
+    <Content Include="scripts\ai.0.22.9-build00167.js" />
+    <Content Include="scripts\ai.0.22.9-build00167.min.js" />
+    <Content Include="scripts\BrowserReload_ThroughHistory.js" />
+    <Content Include="scripts\ButtonUp.js" />
+    <Content Include="scripts\GoToTab.js" />
+    <Content Include="scripts\PrintDiv.js" />
+    <Content Include="scripts\top_navigation.js" />
+    <Content Include="scripts\WebCam.js" />
+    <Content Include="Setting.aspx" />
+    <Content Include="SalesQuotation.aspx" />
+    <Content Include="SFA.aspx" />
+    <Content Include="Invoice.aspx" />
+    <Content Include="STYLES\ChangePassword.css" />
+    <Content Include="STYLES\InvoiceDesign.css" />
+    <Content Include="STYLES\InvoiceDesign_M.css" />
+    <Content Include="STYLES\Login.css" />
+    <Content Include="STYLES\New_Customer.css" />
+    <Content Include="STYLES\select2.min.css" />
+    <Content Include="STYLES\Sidebar.css" />
+    <Content Include="STYLES\w3.css" />
+    <Content Include="STYLES\xtra_ButtonUp.css" />
+    <Content Include="STYLES\xtra_Flip_Image.css" />
+    <Content Include="STYLES\xtra_Full_Page_Tab.css" />
+    <Content Include="STYLES\xtra_Grid_View.css" />
+    <Content Include="STYLES\xtra_top_navigation.css" />
+    <Content Include="STYLES\xxtra_global_Content_Adjuster.css" />
+    <Content Include="STYLES\xtra_Glowing.css" />
+    <Content Include="STYLES\xtra_Hover_Tabs.css" />
+    <Content Include="sync\datatable\css\custom.css" />
+    <Content Include="sync\datatable\css\fixedHeader.dataTables.min.css" />
+    <Content Include="sync\datatable\css\jquery.dataTables.min.css" />
+    <Content Include="sync\datatable\css\responsive.dataTables.min.css" />
+    <Content Include="sync\datatable\css\rowReorder.dataTables.min.css" />
+    <Content Include="sync\datatable\css\select.dataTables.min.css" />
+    <Content Include="sync\datatable\images\sort_asc.png" />
+    <Content Include="sync\datatable\images\sort_asc_disabled.png" />
+    <Content Include="sync\datatable\images\sort_both.png" />
+    <Content Include="sync\datatable\images\sort_desc.png" />
+    <Content Include="sync\datatable\images\sort_desc_disabled.png" />
+    <Content Include="sync\datatable\js\buttons.flash.min.js" />
+    <Content Include="sync\datatable\js\buttons.html5.min.js" />
+    <Content Include="sync\datatable\js\buttons.print.min.js" />
+    <Content Include="sync\datatable\js\dataTables.buttons.min.js" />
+    <Content Include="sync\datatable\js\dataTables.fixedHeader.min.js" />
+    <Content Include="sync\datatable\js\dataTables.responsive.min.js" />
+    <Content Include="sync\datatable\js\dataTables.rowReorder.min.js" />
+    <Content Include="sync\datatable\js\dataTables.select.min.js" />
+    <Content Include="sync\datatable\js\jquery.dataTables.min.js" />
+    <Content Include="sync\datatable\js\jszip.min.js" />
+    <Content Include="sync\datatable\js\pdfmake.min.js" />
+    <Content Include="sync\datatable\js\vfs_fonts.js" />
+    <Content Include="sync\Newtonsoft.Json.dll" />
+    <Content Include="sync\resources\LFIB_icon.ico" />
+    <Content Include="sync\scripts\bootstrap-datepicker.min.js" />
+    <Content Include="sync\scripts\bootstrap.min.js" />
+    <Content Include="sync\scripts\jquery-3.5.1.js" />
+    <Content Include="sync\styles\all.min.css" />
+    <Content Include="sync\styles\custom.css" />
+    <Content Include="sync\styles\font-awesome_4.7.0.min.css" />
+    <Content Include="sync\SyncBatterySNAxToDotNet.aspx" />
+    <Content Include="sync\SyncGatepassAxToDotNetV2.aspx" />
+    <Content Include="sync\SyncGatepassDotNetToAxV2.aspx" />
+    <Content Include="sync\SyncGatepassDotNetToHirev.aspx" />
+    <Content Include="sync\SyncGatepassHirevToDotNet.aspx" />
+    <Content Include="test.aspx" />
+    <Content Include="EditProfile.aspx" />
+    <Content Include="test_screen_size.aspx" />
+    <Content Include="WClaim.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddApplication.aspx.cs">
+      <DependentUpon>AddApplication.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddApplication.aspx.designer.cs">
+      <DependentUpon>AddApplication.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AddExistCust.aspx.cs">
+      <DependentUpon>AddExistCust.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddExistCust.aspx.designer.cs">
+      <DependentUpon>AddExistCust.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AddUser.aspx.cs">
+      <DependentUpon>AddUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddUser.aspx.designer.cs">
+      <DependentUpon>AddUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="API\APIController.cs" />
+    <Compile Include="API\APIProcessor.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Campaign.aspx.cs">
+      <DependentUpon>Campaign.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Campaign.aspx.designer.cs">
+      <DependentUpon>Campaign.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CampaignModel\CampaignModel.cs" />
+    <Compile Include="Campaign_CheckSession.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Campaign_CreateNewOffer.aspx.cs">
+      <DependentUpon>Campaign_CreateNewOffer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Campaign_CreateNewOffer.aspx.designer.cs">
+      <DependentUpon>Campaign_CreateNewOffer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Campaign_DocumentPDF.aspx.cs">
+      <DependentUpon>Campaign_DocumentPDF.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Campaign_DocumentPDF.aspx.designer.cs">
+      <DependentUpon>Campaign_DocumentPDF.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Campaign_Email.aspx.cs">
+      <DependentUpon>Campaign_Email.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Campaign_Email.aspx.designer.cs">
+      <DependentUpon>Campaign_Email.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Campaign_MainMenu.aspx.cs">
+      <DependentUpon>Campaign_MainMenu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Campaign_MainMenu.aspx.designer.cs">
+      <DependentUpon>Campaign_MainMenu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Campaign_Site.Master.cs">
+      <DependentUpon>Campaign_Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Campaign_Site.Master.designer.cs">
+      <DependentUpon>Campaign_Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Campaign_SubmitForm.aspx.cs">
+      <DependentUpon>Campaign_SubmitForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Campaign_SubmitForm.aspx.designer.cs">
+      <DependentUpon>Campaign_SubmitForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CompanyReport.aspx.cs">
+      <DependentUpon>CompanyReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CompanyReport.aspx.designer.cs">
+      <DependentUpon>CompanyReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\AxaptaController.cs" />
+    <Compile Include="CustomerMaster_Online_Report.aspx.cs">
+      <DependentUpon>CustomerMaster_Online_Report.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CustomerMaster_Online_Report.aspx.designer.cs">
+      <DependentUpon>CustomerMaster_Online_Report.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DraftCustomerGPS.aspx.cs">
+      <DependentUpon>DraftCustomerGPS.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DraftCustomerGPS.aspx.designer.cs">
+      <DependentUpon>DraftCustomerGPS.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="GlobalHelper.cs" />
+    <Compile Include="Handler\ImageHandler.ashx.cs">
+      <DependentUpon>ImageHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="MapCustList.aspx.cs">
+      <DependentUpon>MapCustList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MapCustList.aspx.designer.cs">
+      <DependentUpon>MapCustList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NewProductHomePage.aspx.cs">
+      <DependentUpon>NewProductHomePage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NewProductHomePage.aspx.designer.cs">
+      <DependentUpon>NewProductHomePage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NewProductRequest.aspx.cs">
+      <DependentUpon>NewProductRequest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NewProductRequest.aspx.designer.cs">
+      <DependentUpon>NewProductRequest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Payment\Payment_Sub_InvoiceDue.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pod\DTOs\ItemDto.cs" />
+    <Compile Include="pod\DTOs\ResultDto.cs" />
+    <Compile Include="pod\PickingID.cs" />
+    <Compile Include="pod\Utils\AxaptaTTSUtility.cs" />
+    <Compile Include="pod\WebPod.aspx.cs">
+      <DependentUpon>WebPod.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pod\WebPod.aspx.designer.cs">
+      <DependentUpon>WebPod.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PrintingLayout.aspx.cs">
+      <DependentUpon>PrintingLayout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PrintingLayout.aspx.designer.cs">
+      <DependentUpon>PrintingLayout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RocTin.aspx.cs">
+      <DependentUpon>RocTin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RocTin.aspx.designer.cs">
+      <DependentUpon>RocTin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EventBudget.aspx.cs">
+      <DependentUpon>EventBudget.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EventBudget.aspx.designer.cs">
+      <DependentUpon>EventBudget.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EventBudget\EventBudget_GET_NewApplicant.cs" />
+    <Compile Include="EventBudget\EventBudget_Header.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GatePass.aspx.cs">
+      <DependentUpon>GatePass.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GatePass.aspx.designer.cs">
+      <DependentUpon>GatePass.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Map3.aspx.cs">
+      <DependentUpon>Map3.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Map3.aspx.designer.cs">
+      <DependentUpon>Map3.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NewCustomer.aspx.cs">
+      <DependentUpon>NewCustomer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NewCustomer.aspx.designer.cs">
+      <DependentUpon>NewCustomer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NewCustomerApproval.aspx.cs">
+      <DependentUpon>NewCustomerApproval.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NewCustomerApproval.aspx.designer.cs">
+      <DependentUpon>NewCustomerApproval.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RedempApprovalList.aspx.cs">
+      <DependentUpon>RedempApprovalList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RedempApprovalList.aspx.designer.cs">
+      <DependentUpon>RedempApprovalList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ApprovalList.aspx.cs">
+      <DependentUpon>ApprovalList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ApprovalList.aspx.designer.cs">
+      <DependentUpon>ApprovalList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Battery.aspx.cs">
+      <DependentUpon>Battery.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Battery.aspx.designer.cs">
+      <DependentUpon>Battery.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ChangePassword.aspx.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ChangePassword.aspx.designer.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CheckIn.aspx.cs">
+      <DependentUpon>CheckIn.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CheckIn.aspx.designer.cs">
+      <DependentUpon>CheckIn.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CheckInRecord.aspx.cs">
+      <DependentUpon>CheckInRecord.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CheckInRecord.aspx.designer.cs">
+      <DependentUpon>CheckInRecord.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="class_crypto.cs" />
+    <Compile Include="CustomerMaster.aspx.cs">
+      <DependentUpon>CustomerMaster.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CustomerMaster.aspx.designer.cs">
+      <DependentUpon>CustomerMaster.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DownloadFile.aspx.cs">
+      <DependentUpon>DownloadFile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DownloadFile.aspx.designer.cs">
+      <DependentUpon>DownloadFile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EmailApplicant.aspx.cs">
+      <DependentUpon>EmailApplicant.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EmailApplicant.aspx.designer.cs">
+      <DependentUpon>EmailApplicant.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EOR.aspx.cs">
+      <DependentUpon>EOR.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EOR.aspx.designer.cs">
+      <DependentUpon>EOR.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EOR\EOR_GET_NewApplicant.cs" />
+    <Compile Include="EOR\EOR_Sub_Draft_PerformanceListing.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EOR\EOR_Sub_Enquiries_CartonList.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LoginPage.aspx.cs">
+      <DependentUpon>LoginPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LoginPage.aspx.designer.cs">
+      <DependentUpon>LoginPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Redemption_OutBalance.aspx.cs">
+      <DependentUpon>Redemption_OutBalance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Redemption_OutBalance.aspx.designer.cs">
+      <DependentUpon>Redemption_OutBalance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Redemption\Redemption_Get_Details.cs" />
+    <Compile Include="Redemption\Redemption_Sub_NewApplicant.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EOR\EOR_Sub_NewApplicant_2.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EOR\EOR_Sub_Overview.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ForgotPwd.aspx.cs">
+      <DependentUpon>ForgotPwd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ForgotPwd.aspx.designer.cs">
+      <DependentUpon>ForgotPwd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GLOBAL_FUNCTION.cs" />
+    <Compile Include="Payment\Payment_Sub_Enquiries_Statement.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QuotationLayout.aspx.cs">
+      <DependentUpon>QuotationLayout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QuotationLayout.aspx.designer.cs">
+      <DependentUpon>QuotationLayout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Payment\Payment_GET_JournalLine_SelectJournal.cs" />
+    <Compile Include="Payment\Payment_GET_Ledger_Journal_Table.cs" />
+    <Compile Include="Payment\Payment_GET_JournalLine_AddLine.cs" />
+    <Compile Include="Payment\Payment_GET_JournalLine_SelectJournal_Transfer.cs" />
+    <Compile Include="Payment\Payment_GET_Overview.cs" />
+    <Compile Include="Payment\Payment_Sub_Enquiries.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Payment\Payment_Sub_JournalLine_AddLine.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Payment\Payment_Sub_JournalLine_SelectJournal.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Payment\Payment_Sub_JournalLine_SelectJournal_Transfer.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Payment\Payment_Sub_Overview.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Redemption\Redemption_Sub_Overview.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SalesQuotation.aspx.cs">
+      <DependentUpon>SalesQuotation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SalesQuotation.aspx.designer.cs">
+      <DependentUpon>SalesQuotation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SalesReportGroupMonthly_PBM.aspx.cs">
+      <DependentUpon>SalesReportGroupMonthly_PBM.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SalesReportGroupMonthly_PBM.aspx.designer.cs">
+      <DependentUpon>SalesReportGroupMonthly_PBM.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SalesReportGroupMonthly.aspx.cs">
+      <DependentUpon>SalesReportGroupMonthly.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SalesReportGroupMonthly.aspx.designer.cs">
+      <DependentUpon>SalesReportGroupMonthly.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SalesReport_OtherDiv.aspx.cs">
+      <DependentUpon>SalesReport_OtherDiv.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SalesReport_OtherDiv.aspx.designer.cs">
+      <DependentUpon>SalesReport_OtherDiv.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SalesReportGroup_PBM.aspx.cs">
+      <DependentUpon>SalesReportGroup_PBM.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SalesReportGroup_PBM.aspx.designer.cs">
+      <DependentUpon>SalesReportGroup_PBM.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SalesReport_PBM.aspx.cs">
+      <DependentUpon>SalesReport_PBM.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SalesReport_PBM.aspx.designer.cs">
+      <DependentUpon>SalesReport_PBM.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SalesReport.aspx.cs">
+      <DependentUpon>SalesReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SalesReport.aspx.designer.cs">
+      <DependentUpon>SalesReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SalesReportGroup.aspx.cs">
+      <DependentUpon>SalesReportGroup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SalesReportGroup.aspx.designer.cs">
+      <DependentUpon>SalesReportGroup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SalesReport_Get_Budget.cs" />
+    <Compile Include="SFAModel\RedemptionModel.cs" />
+    <Compile Include="SFAModel\SignboardEquipmentModel.cs" />
+    <Compile Include="SFAModel\WClaim_Model.cs" />
+    <Compile Include="SFA\SFA_GET_Enquiries_BatterryOutstanding.cs" />
+    <Compile Include="Quotation\Quotation_Get_Enquiries.cs" />
+    <Compile Include="SFA\SFA_GET_Enquiries_QTDSmenInvoicePerform.cs" />
+    <Compile Include="SFA\SFA_GET_Enquiries_SalesmanTotal.cs" />
+    <Compile Include="SFA\SFA_GET_PROMO_LAYER1.cs" />
+    <Compile Include="SFA\SFA_GET_PROMO_LAYER2.cs" />
+    <Compile Include="Quotation\Quotation_Get_Header.cs" />
+    <Compile Include="SFA\SFA_GET_SALES_HEADER.cs" />
+    <Compile Include="SFA\SFA_GET_FV_ORDER.cs" />
+    <Compile Include="Quotation\Quotation_Get_Sales_Quotation.cs" />
+    <Compile Include="SFA\SFA_GET_SALES_ORDER_2.cs" />
+    <Compile Include="SFA\SFA_GET_SALES_ORDER.cs" />
+    <Compile Include="GLOBAL_VAR.cs" />
+    <Compile Include="InventoryMaster.aspx.cs">
+      <DependentUpon>InventoryMaster.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InventoryMaster.aspx.designer.cs">
+      <DependentUpon>InventoryMaster.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MainMenu.aspx.cs">
+      <DependentUpon>MainMenu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MainMenu.aspx.designer.cs">
+      <DependentUpon>MainMenu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Payment.aspx.cs">
+      <DependentUpon>Payment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Payment.aspx.designer.cs">
+      <DependentUpon>Payment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Setting.aspx.cs">
+      <DependentUpon>Setting.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Setting.aspx.designer.cs">
+      <DependentUpon>Setting.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SFA.aspx.cs">
+      <DependentUpon>SFA.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SFA.aspx.designer.cs">
+      <DependentUpon>SFA.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Invoice.aspx.cs">
+      <DependentUpon>Invoice.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Invoice.aspx.designer.cs">
+      <DependentUpon>Invoice.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SFA\SFA_Sub_Enquiries_BatteryOutstanding.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Quotation\Quotation_Sub_Enquiries.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SFA\SFA_Sub_Enquiries_QTDSmenInvoicePerform.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SFA\SFA_Sub_Enquiries_SalesmanTotal.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SFA\SFA_Sub_PromoLayer2_1.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SFA\SFA_Sub_PromoLayer2_2.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SFA\SFA_Sub_PromoLayer3_1.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SFA\SFA_Sub_PromoLayer3_2.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Quotation\Quotation_Sub_Header.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SFA\SFA_Sub_SalesHeader.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SFA\SFA_Sub_SalesLine_FavouriteOrder.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Quotation\Quotation_Sub_QuotationLine_SalesQuotation.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SFA\SFA_Sub_SalesLine_SalesOrder.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SignboardEquipment.aspx.cs">
+      <DependentUpon>SignboardEquipment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SignboardEquipment.aspx.designer.cs">
+      <DependentUpon>SignboardEquipment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SignboardEquipment_ApprovalList.aspx.cs">
+      <DependentUpon>SignboardEquipment_ApprovalList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SignboardEquipment_ApprovalList.aspx.designer.cs">
+      <DependentUpon>SignboardEquipment_ApprovalList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SignBoardForm.aspx.cs">
+      <DependentUpon>SignBoardForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SignBoardForm.aspx.designer.cs">
+      <DependentUpon>SignBoardForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="sync\GLOBAL_FUNCTION.cs" />
+    <Compile Include="sync\GLOBAL_VAR.cs" />
+    <Compile Include="sync\SyncBatterySNAxToDotNet.aspx.cs">
+      <DependentUpon>SyncBatterySNAxToDotNet.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="sync\SyncBatterySNAxToDotNet.aspx.designer.cs">
+      <DependentUpon>SyncBatterySNAxToDotNet.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="sync\SyncGatepassAxToDotNetV2.aspx.cs">
+      <DependentUpon>SyncGatepassAxToDotNetV2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="sync\SyncGatepassAxToDotNetV2.aspx.designer.cs">
+      <DependentUpon>SyncGatepassAxToDotNetV2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="sync\SyncGatepassDotNetToAxV2.aspx.cs">
+      <DependentUpon>SyncGatepassDotNetToAxV2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="sync\SyncGatepassDotNetToAxV2.aspx.designer.cs">
+      <DependentUpon>SyncGatepassDotNetToAxV2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="sync\SyncGatepassDotNetToHirev.aspx.cs">
+      <DependentUpon>SyncGatepassDotNetToHirev.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="sync\SyncGatepassDotNetToHirev.aspx.designer.cs">
+      <DependentUpon>SyncGatepassDotNetToHirev.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="sync\SyncGatepassHirevToDotNet.aspx.cs">
+      <DependentUpon>SyncGatepassHirevToDotNet.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="sync\SyncGatepassHirevToDotNet.aspx.designer.cs">
+      <DependentUpon>SyncGatepassHirevToDotNet.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="test.aspx.cs">
+      <DependentUpon>test.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="test.aspx.designer.cs">
+      <DependentUpon>test.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EditProfile.aspx.cs">
+      <DependentUpon>EditProfile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EditProfile.aspx.designer.cs">
+      <DependentUpon>EditProfile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="test_screen_size.aspx.cs">
+      <DependentUpon>test_screen_size.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="test_screen_size.aspx.designer.cs">
+      <DependentUpon>test_screen_size.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Visitor_ChangePassword.aspx.cs">
+      <DependentUpon>Visitor_ChangePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Visitor_ChangePassword.aspx.designer.cs">
+      <DependentUpon>Visitor_ChangePassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Visitor_CheckInOut.aspx.cs">
+      <DependentUpon>Visitor_CheckInOut.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Visitor_CheckInOut.aspx.designer.cs">
+      <DependentUpon>Visitor_CheckInOut.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Visitor_CheckInOutQRCode.aspx.cs">
+      <DependentUpon>Visitor_CheckInOutQRCode.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Visitor_CheckInOutQRCode.aspx.designer.cs">
+      <DependentUpon>Visitor_CheckInOutQRCode.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Visitor_CheckSession.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Visitor_CreateNewAppointment.aspx.cs">
+      <DependentUpon>Visitor_CreateNewAppointment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Visitor_CreateNewAppointment.aspx.designer.cs">
+      <DependentUpon>Visitor_CreateNewAppointment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Visitor_GuestAppointment.aspx.cs">
+      <DependentUpon>Visitor_GuestAppointment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Visitor_GuestAppointment.aspx.designer.cs">
+      <DependentUpon>Visitor_GuestAppointment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Visitor_History.aspx.cs">
+      <DependentUpon>Visitor_History.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Visitor_History.aspx.designer.cs">
+      <DependentUpon>Visitor_History.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Visitor_Login.aspx.cs">
+      <DependentUpon>Visitor_Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Visitor_Login.aspx.designer.cs">
+      <DependentUpon>Visitor_Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Visitor_MainMenu.aspx.cs">
+      <DependentUpon>Visitor_MainMenu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Visitor_MainMenu.aspx.designer.cs">
+      <DependentUpon>Visitor_MainMenu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Visitor_Model\AppointmentModel.cs" />
+    <Compile Include="Visitor_Model\NavigationItemsModel.cs" />
+    <Compile Include="Visitor_Model\UserLoginModel.cs" />
+    <Compile Include="Visitor_SecurityGuard.aspx.cs">
+      <DependentUpon>Visitor_SecurityGuard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Visitor_SecurityGuard.aspx.designer.cs">
+      <DependentUpon>Visitor_SecurityGuard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Warranty\WClaim_BatteryList.aspx.cs">
+      <DependentUpon>WClaim_BatteryList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Warranty\WClaim_BatteryList.aspx.designer.cs">
+      <DependentUpon>WClaim_BatteryList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Warranty\WClaim_GET_Report.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Warranty\WClaim_Sub_Report.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WClaim.aspx.cs">
+      <DependentUpon>WClaim.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WClaim.aspx.designer.cs">
+      <DependentUpon>WClaim.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Warranty\WClaim_GET_NewApplicant.cs" />
+    <Compile Include="Warranty\WClaim_Sub_NewApplicant.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Warranty\WClaim_Sub_Overview.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Redemption.aspx.cs">
+      <DependentUpon>Redemption.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Redemption.aspx.designer.cs">
+      <DependentUpon>Redemption.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WeeklySalesReportGroupForPoonsh.aspx.cs">
+      <DependentUpon>WeeklySalesReportGroupForPoonsh.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WeeklySalesReportGroupForPoonsh.aspx.designer.cs">
+      <DependentUpon>WeeklySalesReportGroupForPoonsh.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="ActiveDs">
+      <Guid>{97D25DB0-0363-11CF-ABC4-02608C9E7553}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="sync\sync_logs\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>
+    </ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>DotNetPassword.pfx</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>52525</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:52525/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\build\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\build\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\build\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\build\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.4.2.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.4.2.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.ApplicationInsights.DependencyCollector.2.21.0\build\Microsoft.ApplicationInsights.DependencyCollector.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.ApplicationInsights.DependencyCollector.2.21.0\build\Microsoft.ApplicationInsights.DependencyCollector.targets'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.ApplicationInsights.PerfCounterCollector.2.21.0\build\Microsoft.ApplicationInsights.PerfCounterCollector.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.ApplicationInsights.PerfCounterCollector.2.21.0\build\Microsoft.ApplicationInsights.PerfCounterCollector.targets'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.21.0\build\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.21.0\build\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.targets'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.ApplicationInsights.WindowsServer.2.21.0\build\Microsoft.ApplicationInsights.WindowsServer.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.ApplicationInsights.WindowsServer.2.21.0\build\Microsoft.ApplicationInsights.WindowsServer.targets'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.ApplicationInsights.Web.2.21.0\build\Microsoft.ApplicationInsights.Web.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.ApplicationInsights.Web.2.21.0\build\Microsoft.ApplicationInsights.Web.targets'))" />
+    <Error Condition="!Exists('..\packages\NETStandard.Library.2.0.0\build\netstandard2.0\NETStandard.Library.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\NETStandard.Library.2.0.0\build\netstandard2.0\NETStandard.Library.targets'))" />
+  </Target>
+  <Import Project="..\packages\Microsoft.ApplicationInsights.DependencyCollector.2.21.0\build\Microsoft.ApplicationInsights.DependencyCollector.targets" Condition="Exists('..\packages\Microsoft.ApplicationInsights.DependencyCollector.2.21.0\build\Microsoft.ApplicationInsights.DependencyCollector.targets')" />
+  <Import Project="..\packages\Microsoft.ApplicationInsights.PerfCounterCollector.2.21.0\build\Microsoft.ApplicationInsights.PerfCounterCollector.targets" Condition="Exists('..\packages\Microsoft.ApplicationInsights.PerfCounterCollector.2.21.0\build\Microsoft.ApplicationInsights.PerfCounterCollector.targets')" />
+  <Import Project="..\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.21.0\build\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.targets" Condition="Exists('..\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.21.0\build\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.targets')" />
+  <Import Project="..\packages\Microsoft.ApplicationInsights.WindowsServer.2.21.0\build\Microsoft.ApplicationInsights.WindowsServer.targets" Condition="Exists('..\packages\Microsoft.ApplicationInsights.WindowsServer.2.21.0\build\Microsoft.ApplicationInsights.WindowsServer.targets')" />
+  <Import Project="..\packages\Microsoft.ApplicationInsights.Web.2.21.0\build\Microsoft.ApplicationInsights.Web.targets" Condition="Exists('..\packages\Microsoft.ApplicationInsights.Web.2.21.0\build\Microsoft.ApplicationInsights.Web.targets')" />
+  <Import Project="..\packages\NETStandard.Library.2.0.0\build\netstandard2.0\NETStandard.Library.targets" Condition="Exists('..\packages\NETStandard.Library.2.0.0\build\netstandard2.0\NETStandard.Library.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

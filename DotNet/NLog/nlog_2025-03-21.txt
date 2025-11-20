@@ -1,0 +1,24 @@
+2025-03-21 15:47:07.4240|INFO|DotNetSync.lhdn.Controllers.ConfigController|Load config from config.xml
+2025-03-21 15:47:07.4978|INFO|DotNetSync.lhdn.Controllers.ConfigController|Load config completed
+2025-03-21 15:47:07.4978|INFO|DotNetSync.lhdn.Controllers.ConfigController|Load config from config.xml
+2025-03-21 15:47:07.4978|INFO|DotNetSync.lhdn.Controllers.ConfigController|Load config completed
+2025-03-21 15:47:07.7673|INFO|DotNetSync.lhdn.Controllers.ConfigController|Load config from config.xml
+2025-03-21 15:47:07.7835|INFO|DotNetSync.lhdn.Controllers.ConfigController|Load config completed
+2025-03-21 15:47:08.0906|ERROR|DotNetSync.lhdn.Controllers.AxController|Logon failed error: Connection with the Application Object Server could not be established.
+2025-03-21 15:47:08.0906|ERROR|DotNetSync.lhdn.Controllers.AxController|Stack Trace:    at Microsoft.Dynamics.BusinessConnectorNet.Axapta.Logon(BC_PROXY_ACCOUNT_INFO* pBCProxyAccountInfo, String company, String language, String objectServer, String configuration)
+   at Microsoft.Dynamics.BusinessConnectorNet.Axapta.LogonUsingBCProxyAccount(_SEC_WINNT_AUTH_IDENTITY_W* pImpersonatedUserAccount, NetworkCredential bcProxyCredentials, String company, String language, String objectServer, String configuration)
+   at Microsoft.Dynamics.BusinessConnectorNet.Axapta.LogonAs(String user, String domain, NetworkCredential bcProxyCredentials, String company, String language, String objectServer, String configuration)
+   at DotNetSync.lhdn.Controllers.AxController.axapta_user_login(String username, String password, String company_short_name) in E:\SCode\v120\DotNet\lhdn\Controllers\AxController.cs:line 77
+2025-03-21 15:47:08.1091|ERROR|DotNetSync.lhdn.EInvoiceLoginPage|LogonFailedException: Login failed. Invalid domain user name or password.
+2025-03-21 15:47:08.1091|ERROR|DotNetSync.lhdn.EInvoiceLoginPage|Stack Trace:    at Microsoft.Dynamics.BusinessConnectorNet.Axapta.Logon(BC_PROXY_ACCOUNT_INFO* pBCProxyAccountInfo, String company, String language, String objectServer, String configuration)
+   at Microsoft.Dynamics.BusinessConnectorNet.Axapta.LogonUsingBCProxyAccount(_SEC_WINNT_AUTH_IDENTITY_W* pImpersonatedUserAccount, NetworkCredential bcProxyCredentials, String company, String language, String objectServer, String configuration)
+   at Microsoft.Dynamics.BusinessConnectorNet.Axapta.LogonAs(String user, String domain, NetworkCredential bcProxyCredentials, String company, String language, String objectServer, String configuration)
+   at DotNetSync.lhdn.Controllers.AxController.axapta_user_login(String username, String password, String company_short_name) in E:\SCode\v120\DotNet\lhdn\Controllers\AxController.cs:line 103
+   at DotNetSync.lhdn.EInvoiceLoginPage.login_axapta(String user_id, String password, String company_short_name) in E:\SCode\v120\DotNet\lhdn\EInvoiceLoginPage.aspx.cs:line 218
+2025-03-21 15:47:31.6170|INFO|DotNetSync.lhdn.EInvoiceDashboard|Get outbount invoice count (LF_Status == 6)
+2025-03-21 15:47:32.1155|INFO|DotNetSync.lhdn.EInvoiceDashboard|Get outbount invoice count (LF_Status == 5)
+2025-03-21 15:47:32.6162|INFO|DotNetSync.lhdn.EInvoiceDashboard|Get outbount invoice count (LF_Status == 2)
+2025-03-21 15:47:33.1210|INFO|DotNetSync.lhdn.EInvoiceDashboard|Get outbount invoice count (LF_Status == 0)
+2025-03-21 15:47:33.6575|INFO|DotNetSync.lhdn.EInvoiceDashboard|Get outbount invoice count (LF_Status == 4)
+2025-03-21 15:47:35.1294|INFO|DotNetSync.lhdn.EInvoiceInvoiceList|Getting outbound list
+2025-03-21 15:47:35.6568|INFO|DotNetSync.lhdn.EInvoiceInvoiceList|455 rows selected for ComRegNo: PPM

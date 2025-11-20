@@ -1,0 +1,19 @@
+﻿.Button_Up {
+    display: none;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    z-index: 99;
+    font-size: 18px;
+    border: 1px #f58345 solid;
+    outline: none;
+    background-color: white;
+    color: black;
+    cursor: pointer;
+    padding: 6px 12px;
+    border-radius: 4px;
+}
+
+    .Button_Up:hover {
+        background-color: #f58345;
+    }

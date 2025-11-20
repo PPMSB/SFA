@@ -1,0 +1,434 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="EInvoiceMaster.master.cs" Inherits="DotNetSync.lhdn.EInvoiceMaster" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <meta name="description" content=""/>
+    <meta name="author" content=""/>
+
+    <asp:ContentPlaceHolder ID="page_title" runat="server"></asp:ContentPlaceHolder>
+
+    <link href="styles/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="styles/custom.css"/>
+    <asp:ContentPlaceHolder ID="css_section" runat="server"></asp:ContentPlaceHolder>
+    <style>
+        body{
+            font-size: 0.85em;
+        }
+
+        .text-white{
+            color:white;
+        }
+
+        .navbar-nav{
+            --bs-nav-link-color:white;
+        }
+
+        .form-select{
+            font-size:inherit;
+        }
+
+        .btn{
+            font-size:inherit;
+        }
+
+        .account-link{
+            color: white;
+            text-decoration:none;
+            background-color: dodgerblue;
+            font-size: 0.9em;
+            padding: 3px 8px;
+            border-radius: 5px 0 0 5px;
+        }
+
+        .logout-link{
+            color: white;
+            text-decoration:none;
+            background-color: orangered;
+            font-size: 0.9em;
+            padding: 3px 8px;
+            border-radius: 0 5px 5px 0;
+        }
+
+        .radius-3px{
+            border-radius: 3px;
+        }
+
+        .radius-5px{
+            border-radius: 5px;
+        }
+
+        .radius-10px{
+            border-radius: 10px;
+        }
+    </style>
+
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark text-white py-3">
+        <div class="container-fluid ps-4">
+            <a class="navbar-brand" href="EInvoiceDashboard.aspx">e-Invoice Dashboard</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse ml-auto" id="navbarSupportedContent">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                    <li class="nav-item px-2">
+                        <a class="nav-link" href="#" onclick="outbound()">Outbound</a>
+                    </li>
+                    <li class="nav-item px-2">
+                        <a class="nav-link" href="#" onclick="uuid_failed()">Submission Failed</a>
+                    </li>
+                    <li class="nav-item px-2">
+                        <a class="nav-link" href="#" onclick="long_id_pending()">Pending Validation</a>
+                    </li>
+                    <li class="nav-item px-2">
+                        <a class="nav-link" href="#" onclick="long_id_failed()">Validation Failed</a>
+                    </li>
+                    <li class="nav-item px-2">
+                        <a class="nav-link" href="#" onclick="completed()">Completed</a>
+                    </li>  
+                    <!--
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Dropdown
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Menu Item 1</a></li>
+                            <li><a class="dropdown-item" href="#">Menu Item 2</a></li>
+                            <li><a class="dropdown-item" href="#">Menu Item 3</a></li>
+                            <li><a class="dropdown-item" href="#">Menu Item 4</a></li>
+                            <li><a class="dropdown-item" href="#">Menu Item 5</a></li>
+                            <li><a class="dropdown-item" href="#">Menu Item 6</a></li>
+                            <li><a class="dropdown-item" href="#">Menu Item 7</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+                    -->
+                </ul>
+                <form class="d-flex">
+                    <select id="company" class="form-select">
+                        <% if (access_companies.Contains("PPM")){ %>
+                            <option value="PPM">Posim Petroleum Marketing Sdn Bhd</option>
+                        <%}%>
+                        <% if (access_companies.Contains("PBM")){ %>
+                        <option value="PBM">Posim Marketing Sdn Bhd</option>
+                        <%}%>
+                        <% if (access_companies.Contains("PPP")){ %>
+                        <option value="PPP">Lion Petroleum Products Sdn Bhd</option>
+                        <%}%>
+                    </select>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid px-0">
+        <div class="row col-12 mx-0 px-0">
+            <main role="main" class="row col-12 py-0 m-0 px-0">
+                
+                <!--
+                <div class="row p-3 m-0 col-12 text-secondary border-bottom border-secondary">
+                    <h3 class="text-uppercase pt-2 col-9">e-Invoice Dashboard</h3>
+                    <div class="col-3">
+                        <select id="company" class="form-select">
+                            <option value="198501007134">Posim Petroleum Marketing Sdn Bhd</option>
+                            <option value="LPP">LPP</option>
+                        </select>
+                    </div>                    
+                </div>
+                -->
+                <!--left menu panel-->
+                <div id="left_menu_panel" class="col-md-4 col-lg-3 col-xl-2 d-none d-lg-inline-block p-2 text-dark mt-0" style="height:100%; min-height:97vh; background-color:#EFEFEF">
+                    <div id="submenu_panel">
+                        <div class="row px-2 py-1 mt-3 col-12 mx-0 text-center">
+                            <h6></h6>
+                        </div>
+
+                        <div class="row py-1 px-3 mx-0">
+                            <a href="EInvoiceDashboard.aspx" class="btn btn-secondary text-uppercase my-1 col-12" data-toggle="tooltip" data-placement="bottom" title="e-Invoice Dashboard">Dashboard</a>
+                            <a href="#" class="btn btn-secondary text-uppercase my-1 col-12" data-toggle="tooltip" data-placement="bottom" title="New document(s)" onclick="outbound()">Outbound</a>
+                            <a href="#" class="btn btn-secondary text-uppercase my-1 col-12" data-toggle="tooltip" data-placement="bottom" title="Failed on submission" onclick="uuid_failed()">Submission Failed</a>
+                            <a href="#" class="btn btn-secondary text-uppercase my-1 col-12" data-toggle="tooltip" data-placement="bottom" title="Successful submission, pending validation" onclick="long_id_pending()">Pending Validation</a>
+                            <a href="#" class="btn btn-secondary text-uppercase my-1 col-12" data-toggle="tooltip" data-placement="bottom" title="Failed Validation" onclick="long_id_failed()">Validation Failed</a>
+                            <a href="#" class="btn btn-secondary text-uppercase my-1 col-12" data-toggle="tooltip" data-placement="bottom" title="Completed document(s)" onclick="completed()">Completed</a>
+                            <!--
+                            <a href="#" class="btn btn-secondary text-uppercase my-1 col-12" data-toggle="tooltip" data-placement="bottom" title="Under construction">Menu Item 3</a>
+                            <a href="#" class="btn btn-secondary text-uppercase my-1 col-12" data-toggle="tooltip" data-placement="bottom" title="Under construction">Menu Item 4</a>
+                            <a href="#" class="btn btn-secondary text-uppercase my-1 col-12" data-toggle="tooltip" data-placement="bottom" title="Under construction">Menu Item 5</a>
+                            <a href="#" class="btn btn-secondary text-uppercase my-1 col-12" data-toggle="tooltip" data-placement="bottom" title="Under construction">Menu Item 6</a>
+                            <a href="#" class="btn btn-secondary text-uppercase my-1 col-12" data-toggle="tooltip" data-placement="bottom" title="Under construction">Menu Item 7</a>
+                            -->
+                        </div>
+                    </div>
+                </div>
+          
+                <!--end of left menu panel-->
+
+                <div class="container col-12 col-lg-9 col-xl-10 p-2 mt-0">
+                    <% if (!string.IsNullOrEmpty(Session["einvoice_user_name"] as string)) { %>
+                    <div class="col-12 d-none d-lg-block bg-black">
+                        <a href="javascript:void(0)" onclick="logout()" class="float-end logout-link"><span class="px-2 py-2 align-self-end">Logout</span></a>
+                        <a href="#" class="float-end account-link"><span class="px-2 py-2 align-self-end"><%=Session["einvoice_user_name"] %> (<%=Session["einvoice_user_id"] %>)</span></a>                        
+                    </div>
+                    <% } else { %>
+                        <div class="col-12 d-none d-lg-block p-4 radius-5px text-center bg-secondary-subtle">
+                            Please login to view reports
+                        </div>
+                    <% } %>
+                    <asp:ContentPlaceHolder ID="content" runat="server"></asp:ContentPlaceHolder>                    
+                </div>
+
+            </main>
+        </div>
+    </div>
+
+    <!-- Logout Confirmation Modal -->
+    <div class="modal fade" id="logoutModal" tabindex="-1" aria-labelledby="logoutModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header bg-success text-light">
+            <h5 class="modal-title" id="logoutModalLabel">Logout Confirmation</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body pb-5">
+            <p>Are you sure you want to logout?</p>
+            <div id="logoutMessage" class="text-success" style="display: none;"></div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" id="cancelLogout" data-bs-dismiss="modal">No</button>
+            <button type="button" class="btn btn-primary" id="confirmLogout">Yes, Logout</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Bootstrap 5.3 & Popper bundle -->
+    <script src="scripts/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="scripts/jquery-3.5.1.js"></script>
+    <asp:ContentPlaceHolder ID="javascript_section" runat="server"></asp:ContentPlaceHolder>
+    <script>
+        function outbound() {
+
+            var formatted_from_date = "";
+            var invoice_from_date = $("#invoice_from_date").val();
+            if (invoice_from_date) {
+                var formatted_from_date = formatDateToDMY(invoice_from_date);
+                //invoice_date = formatDateToDMY(invoice_date);
+                //console.log("Formatted from date:", formatted_from_date);
+            } else {
+                invoice_from_date = "";
+                //console.log("No from date selected. From date is set to an empty string.");
+            }
+
+            var formatted_to_date = "";
+            var invoice_to_date = $("#invoice_to_date").val();
+            if (invoice_to_date) {
+                var formatted_to_date = formatDateToDMY(invoice_to_date);
+                //invoice_date = formatDateToDMY(invoice_date);
+                //console.log("Formatted to date:", formatted_to_date);
+            } else {
+                invoice_to_date = "";
+                //console.log("No to date selected. To date is set to an empty string.");
+            }
+
+            var company = $("#company").val();
+            window.location.href = `EInvoiceInvoiceList.aspx?comregno=${company}&status=<%=constants.SUBMISSION_NEW%>&from_date=${invoice_from_date}&to_date=${invoice_to_date}`;
+        }
+
+        function uuid_failed() {
+
+            var formatted_from_date = "";
+            var invoice_from_date = $("#invoice_from_date").val();
+            if (invoice_from_date) {
+                var formatted_from_date = formatDateToDMY(invoice_from_date);
+                //invoice_date = formatDateToDMY(invoice_date);
+                //console.log("Formatted from date:", formatted_from_date);
+            } else {
+                invoice_from_date = "";
+                //console.log("No from date selected. From date is set to an empty string.");
+            }
+
+            var formatted_to_date = "";
+            var invoice_to_date = $("#invoice_to_date").val();
+            if (invoice_to_date) {
+                var formatted_to_date = formatDateToDMY(invoice_to_date);
+                //invoice_date = formatDateToDMY(invoice_date);
+                //console.log("Formatted to date:", formatted_to_date);
+            } else {
+                invoice_to_date = "";
+                //console.log("No to date selected. To date is set to an empty string.");
+            }
+
+            var company = $("#company").val();
+            window.location.href = `EInvoiceInvoiceList.aspx?comregno=${company}&status=<%=constants.SUBMISSION_UUID_FAILED%>&from_date=${invoice_from_date}&to_date=${invoice_to_date}`;
+        }
+
+        function long_id_pending() {
+
+            var formatted_from_date = "";
+            var invoice_from_date = $("#invoice_from_date").val();
+            if (invoice_from_date) {
+                var formatted_from_date = formatDateToDMY(invoice_from_date);
+                //invoice_date = formatDateToDMY(invoice_date);
+                //console.log("Formatted from date:", formatted_from_date);
+            } else {
+                invoice_from_date = "";
+                //console.log("No from date selected. From date is set to an empty string.");
+            }
+
+            var formatted_to_date = "";
+            var invoice_to_date = $("#invoice_to_date").val();
+            if (invoice_to_date) {
+                var formatted_to_date = formatDateToDMY(invoice_to_date);
+                //invoice_date = formatDateToDMY(invoice_date);
+                //console.log("Formatted to date:", formatted_to_date);
+            } else {
+                invoice_to_date = "";
+                //console.log("No to date selected. To date is set to an empty string.");
+            }
+
+            var company = $("#company").val();
+            window.location.href = `EInvoiceInvoiceList.aspx?comregno=${company}&status=<%=constants.SUBMISSION_LONG_ID_PENDING%>&from_date=${invoice_from_date}&to_date=${invoice_to_date}`;
+        }
+
+        function long_id_failed() {
+
+            var formatted_from_date = "";
+            var invoice_from_date = $("#invoice_from_date").val();
+            if (invoice_from_date) {
+                var formatted_from_date = formatDateToDMY(invoice_from_date);
+                //invoice_date = formatDateToDMY(invoice_date);
+                //console.log("Formatted from date:", formatted_from_date);
+            } else {
+                invoice_from_date = "";
+                //console.log("No from date selected. From date is set to an empty string.");
+            }
+
+            var formatted_to_date = "";
+            var invoice_to_date = $("#invoice_to_date").val();
+            if (invoice_to_date) {
+                var formatted_to_date = formatDateToDMY(invoice_to_date);
+                //invoice_date = formatDateToDMY(invoice_date);
+                //console.log("Formatted to date:", formatted_to_date);
+            } else {
+                invoice_to_date = "";
+                //console.log("No to date selected. To date is set to an empty string.");
+            }
+
+            var company = $("#company").val();
+            window.location.href = `EInvoiceInvoiceList.aspx?comregno=${company}&status=<%=constants.SUBMISSION_LONG_ID_FAILED%>&from_date=${invoice_from_date}&to_date=${invoice_to_date}`;
+        }
+
+        function completed() {
+
+            var formatted_from_date = "";
+            var invoice_from_date = $("#invoice_from_date").val();
+            if (invoice_from_date) {
+                var formatted_from_date = formatDateToDMY(invoice_from_date);
+                //invoice_date = formatDateToDMY(invoice_date);
+                //console.log("Formatted from date:", formatted_from_date);
+            } else {
+                invoice_from_date = "";
+                //console.log("No from date selected. From date is set to an empty string.");
+            }
+
+            var formatted_to_date = "";
+            var invoice_to_date = $("#invoice_to_date").val();
+            if (invoice_to_date) {
+                var formatted_to_date = formatDateToDMY(invoice_to_date);
+                //invoice_date = formatDateToDMY(invoice_date);
+                //console.log("Formatted to date:", formatted_to_date);
+            } else {
+                invoice_to_date = "";
+                //console.log("No to date selected. To date is set to an empty string.");
+            }
+
+            var company = $("#company").val();
+            window.location.href = `EInvoiceInvoiceList.aspx?comregno=${company}&status=<%=constants.SUBMISSION_COMPLETED%>&from_date=${invoice_from_date}&to_date=${invoice_to_date}`;
+        }
+
+        function logout() {
+            // Show the logout confirmation modal
+            var logoutModal = new bootstrap.Modal(document.getElementById('logoutModal'), {
+                keyboard: false
+            });
+            logoutModal.show();
+
+            // Handle the confirmation button click
+            $('#confirmLogout').off('click').on('click', function () {
+                $('#cancelLogout').prop("disabled", true);
+                $('#confirmLogout').prop("disabled", true);
+                // Proceed with the AJAX logout request
+                $.ajax({
+                    type: "POST",
+                    url: "EInvoiceLoginPage.aspx/logout",  // Ensure the URL targets the correct WebMethod
+                    contentType: "application/json; charset=utf-8",
+                    success: function (response) {
+                        console.log(response);
+
+                        var json_response = JSON.parse(response.d);
+
+                        var status = json_response.status;
+                        var status_msg = json_response.status_msg;
+
+                        if (status === "success") {
+                            // Display the logout success message
+                            $('#logoutMessage').text("Logout successful, redirecting to login page...").show();
+
+                            // Hide the modal after 2 seconds and redirect to the login page
+                            setTimeout(function () {
+                                logoutModal.hide();
+                                window.location.href = "EInvoiceLoginPage.aspx";
+                            }, 2000);
+                        }
+                    },
+                    error: function (jqXHR, textStatus) {
+                        alert("Error during logout: " + textStatus);
+                        console.log(textStatus);
+                    }
+                });
+            });
+        }
+
+
+        function logoutx() {
+            event.preventDefault();
+
+            if (!confirm("Are you sure you want to logout?")) {
+                return;
+            }
+
+            $.ajax({
+                type: "POST",
+                url: "EInvoiceLoginPage.aspx/logout",  // Update URL to target the correct page and method
+                contentType: "application/json; charset=utf-8",
+                success: function (response) {
+                    console.log(response);
+
+                    var json_response = JSON.parse(response.d);
+
+                    var status = json_response.status;
+                    var status_msg = json_response.status_msg;
+
+                    if (status === "success") {
+                        //alert("Logout successful");
+
+                        // Redirect to the login page
+                        window.location.href = "EInvoiceLoginPage.aspx";
+                    }
+                },
+                error: function (jqXHR, textStatus) {
+                    alert("Error during logout: " + textStatus);
+                    console.log(textStatus);
+                }
+            });
+        }
+    </script>
+</body>
+</html>
+

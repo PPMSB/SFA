@@ -1,0 +1,214 @@
+﻿.header1 {
+    /* Your existing header styles */
+    /* Adjust the margin-left to create space for the fixed sidebar */
+    margin-left: 275px;
+}
+
+
+.content {
+    margin-left: 270px;
+    padding: 20px;
+    color:black;
+    overflow: auto;
+    max-height:100%;
+}
+
+
+
+.function {
+    margin-left:100px;
+    margin-right:auto;
+
+}
+
+
+    .form-group {
+        margin-bottom: 10px;
+    }
+
+label {
+    display: block;
+    width: 100%; /* Set to 100% width to span the entire width of the container */
+    text-align: left;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="button"]
+button, input[type="tel"],
+textarea,
+select
+#map {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+input[type="submit"] {
+    background-color: darkorange;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+    input[type="submit"]:hover {
+        background-color: #45a049;
+    }
+
+
+.form-group label[for="ExistDoc"],
+.form-group label[for="NewDoc"] {
+    display: inline;
+    font-weight: normal;
+}
+
+button1 {
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+}
+
+    button1:hover {
+        background-color:  #007bff;
+    }
+
+.CUST {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100vh;
+    margin: 0;
+}
+
+.datatable-container {
+    margin-left: 250px;
+}
+
+h2{
+    text-align:center;
+    background-color:antiquewhite;
+}
+.Documents, .DraftForm, .ExistingCustomer, .CustomerReport, .CustomerContactDetails, .SalesmanDeclaration {
+    max-width: 1500px; 
+    margin-left: 250px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: wheat;
+}
+
+.Documents {
+    max-width: 1500px;
+    margin-left: 250px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+    .Documents h2 {
+        color: #333;
+        text-align: center;
+    }
+
+    .Documents form {
+        display: grid;
+        grid-gap: 10px;
+        background-color:wheat;
+    }
+
+    .Documents label {
+        display: block;
+        margin-bottom: 5px;
+        width: 100%;
+        text-align: justify; /* Justify the text */
+    }
+
+    .Documents input[type="checkbox"] {
+        margin-right: 5px;
+    }
+
+    .Documents input[type="submit"] {
+        width: 100%;
+        padding: 10px;
+        background-color: darkorange;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+        .Documents input[type="submit"]:hover {
+            background-color: forestgreen;
+        }
+    .Documents label img {
+        width: 20px; /* Adjust the width of the image as needed */
+        height: auto;
+        margin-left: 10px; /* Adjust the spacing between the text and the image */
+    }
+
+.GuarantorForm {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: wheat;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.GuarantorForm label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+    .GuarantorForm select,
+    .GuarantorForm input[type="text"],
+    .GuarantorForm input[type="date"],
+    .GuarantorForm input[type="tel"],
+    .GuarantorForm textarea {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        margin-top: 5px;
+    }
+
+.GuarantorForm input[type="submit"] {
+    background-color: darkorange;
+    color: white;
+    padding: 10px 15px; 
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+    .GuarantorForm input[type="submit"]:hover {
+        background-color: #45a049;
+    }
+
+
+
+/* Add more styling as needed for checkboxes, radio buttons, etc. */
+@media screen and (max-width: 767px) {
+    .AddAcc {
+        margin: 20px;
+        padding: 20px;
+    }
+}
+
+.datatable-container {
+    margin-left: 250px; /* Adjust the value to move the table more to the left */
+}
+
+#GridView1,
+#GridView2 {
+    margin-left: 250px; /* Adjust the value to move the table more to the left */
+}

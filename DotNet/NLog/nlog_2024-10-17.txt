@@ -1,0 +1,11 @@
+2024-10-17 12:04:28.1024|INFO|DotNetSync.lhdn.Controllers.ConfigController|Load config from config.xml
+2024-10-17 12:04:28.1774|INFO|DotNetSync.lhdn.Controllers.ConfigController|Load config completed
+2024-10-17 12:04:28.1774|INFO|DotNetSync.lhdn.Controllers.ConfigController|Load config from config.xml
+2024-10-17 12:04:28.1774|INFO|DotNetSync.lhdn.Controllers.ConfigController|Load config completed
+2024-10-17 12:04:28.4754|INFO|DotNetSync.lhdn.Controllers.ConfigController|Load config from config.xml
+2024-10-17 12:04:28.4754|INFO|DotNetSync.lhdn.Controllers.ConfigController|Load config completed
+2024-10-17 12:04:29.2424|INFO|DotNetSync.lhdn.EInvoiceDashboard|Get outbount invoice count (LF_Status == 0)
+2024-10-17 12:04:29.7474|INFO|DotNetSync.lhdn.EInvoiceDashboard|Get outbount invoice count (LF_Status == 5)
+2024-10-17 12:04:30.2476|INFO|DotNetSync.lhdn.EInvoiceDashboard|Get outbount invoice count (LF_Status == 2)
+2024-10-17 12:04:30.7489|INFO|DotNetSync.lhdn.EInvoiceDashboard|Get outbount invoice count (LF_Status == 4)
+2024-10-17 12:04:31.2559|INFO|DotNetSync.lhdn.EInvoiceDashboard|Get outbount invoice count (LF_Status == 6)

@@ -1,0 +1,45 @@
+2024-08-22 14:21:25.0435|INFO|DotNetSync.lhdn.EInvoiceDashboard|Get outbount invoice count (LF_Status == 2)
+2024-08-22 14:21:25.1180|INFO|DotNetSync.lhdn.Controllers.ConfigController|Load config from config.xml
+2024-08-22 14:21:25.1180|INFO|DotNetSync.lhdn.Controllers.ConfigController|Load config completed
+2024-08-22 14:21:25.1180|INFO|DotNetSync.lhdn.Controllers.ConfigController|Load config from config.xml
+2024-08-22 14:21:25.1180|INFO|DotNetSync.lhdn.Controllers.ConfigController|Load config completed
+2024-08-22 14:21:26.3593|INFO|DotNetSync.lhdn.EInvoiceDashboard|Get outbount invoice count (LF_Status == 4)
+2024-08-22 14:21:26.8597|INFO|DotNetSync.lhdn.EInvoiceDashboard|Get outbount invoice count (LF_Status == 5)
+2024-08-22 14:21:27.3599|INFO|DotNetSync.lhdn.EInvoiceDashboard|Get outbount invoice count (LF_Status == 0)
+2024-08-22 14:21:27.8717|INFO|DotNetSync.lhdn.EInvoiceDashboard|Get outbount invoice count (LF_Status == 3)
+2024-08-22 14:23:20.3418|INFO|DotNetSync.lhdn.EInvoiceDashboard|Get outbount invoice count (LF_Status == 0)
+2024-08-22 14:23:20.4201|INFO|DotNetSync.lhdn.Controllers.ConfigController|Load config from config.xml
+2024-08-22 14:23:20.4201|INFO|DotNetSync.lhdn.Controllers.ConfigController|Load config completed
+2024-08-22 14:23:20.4201|INFO|DotNetSync.lhdn.Controllers.ConfigController|Load config from config.xml
+2024-08-22 14:23:20.4201|INFO|DotNetSync.lhdn.Controllers.ConfigController|Load config completed
+2024-08-22 14:23:21.1760|INFO|DotNetSync.lhdn.EInvoiceDashboard|Get outbount invoice count (LF_Status == 5)
+2024-08-22 14:23:21.6768|INFO|DotNetSync.lhdn.EInvoiceDashboard|Get outbount invoice count (LF_Status == 4)
+2024-08-22 14:23:22.1772|INFO|DotNetSync.lhdn.EInvoiceDashboard|Get outbount invoice count (LF_Status == 3)
+2024-08-22 14:23:22.6787|INFO|DotNetSync.lhdn.EInvoiceDashboard|Get outbount invoice count (LF_Status == 2)
+2024-08-22 14:23:27.1724|INFO|DotNetSync.lhdn.EInvoiceDashboard|Get outbount invoice count (LF_Status == 2)
+2024-08-22 14:23:27.6741|INFO|DotNetSync.lhdn.EInvoiceDashboard|Get outbount invoice count (LF_Status == 3)
+2024-08-22 14:23:28.1757|INFO|DotNetSync.lhdn.EInvoiceDashboard|Get outbount invoice count (LF_Status == 5)
+2024-08-22 14:23:28.6758|INFO|DotNetSync.lhdn.EInvoiceDashboard|Get outbount invoice count (LF_Status == 0)
+2024-08-22 14:23:29.1779|INFO|DotNetSync.lhdn.EInvoiceDashboard|Get outbount invoice count (LF_Status == 4)
+2024-08-22 14:23:39.9498|INFO|DotNetSync.lhdn.EInvoiceDashboard|Get outbount invoice count (LF_Status == 0)
+2024-08-22 14:23:40.4602|INFO|DotNetSync.lhdn.EInvoiceDashboard|Get outbount invoice count (LF_Status == 5)
+2024-08-22 14:23:40.9623|INFO|DotNetSync.lhdn.EInvoiceDashboard|Get outbount invoice count (LF_Status == 4)
+2024-08-22 14:23:41.4637|INFO|DotNetSync.lhdn.EInvoiceDashboard|Get outbount invoice count (LF_Status == 3)
+2024-08-22 14:23:41.9657|INFO|DotNetSync.lhdn.EInvoiceDashboard|Get outbount invoice count (LF_Status == 2)
+2024-08-22 14:23:50.7515|INFO|DotNetSync.lhdn.EInvoiceInvoiceList|Getting outbound list
+2024-08-22 14:23:50.8433|INFO|DotNetSync.lhdn.EInvoiceInvoiceList|57 rows selected for ComRegNo: PPM
+2024-08-22 14:24:04.2628|INFO|DotNetSync.lhdn.EInvoiceInvoiceList|Getting outbound list
+2024-08-22 14:24:04.3126|INFO|DotNetSync.lhdn.EInvoiceInvoiceList|0 rows selected for ComRegNo: PPM
+2024-08-22 14:24:09.6848|INFO|DotNetSync.lhdn.EInvoiceInvoiceList|Getting outbound list
+2024-08-22 14:24:09.7467|INFO|DotNetSync.lhdn.EInvoiceInvoiceList|37 rows selected for ComRegNo: PPM
+2024-08-22 14:24:24.6607|INFO|DotNetSync.lhdn.EInvoiceInvoiceList|Getting outbound list
+2024-08-22 14:24:24.8564|INFO|DotNetSync.lhdn.EInvoiceInvoiceList|261 rows selected for ComRegNo: PPM
+2024-08-22 14:46:12.3028|INFO|DotNetSync.lhdn.EInvoiceDashboard|Get outbount invoice count (LF_Status == 0)
+2024-08-22 14:46:12.3935|INFO|DotNetSync.lhdn.Controllers.ConfigController|Load config from config.xml
+2024-08-22 14:46:12.4007|INFO|DotNetSync.lhdn.Controllers.ConfigController|Load config completed
+2024-08-22 14:46:12.4007|INFO|DotNetSync.lhdn.Controllers.ConfigController|Load config from config.xml
+2024-08-22 14:46:12.4007|INFO|DotNetSync.lhdn.Controllers.ConfigController|Load config completed
+2024-08-22 14:46:13.1188|INFO|DotNetSync.lhdn.EInvoiceDashboard|Get outbount invoice count (LF_Status == 5)
+2024-08-22 14:46:13.6198|INFO|DotNetSync.lhdn.EInvoiceDashboard|Get outbount invoice count (LF_Status == 2)
+2024-08-22 14:46:13.6651|INFO|DotNetSync.lhdn.EInvoiceDashboard|Get outbount invoice count (LF_Status == 4)
+2024-08-22 14:46:14.1325|INFO|DotNetSync.lhdn.EInvoiceDashboard|Get outbount invoice count (LF_Status == 3)

@@ -1,0 +1,184 @@
+﻿
+.mydatagrid {
+    width: auto;
+    border: 1px black;
+}
+
+    .mydatagrid tr:nth-child(odd) {
+        background-color: #eee;
+    }
+
+    .mydatagrid th {
+        background-color: #fbb58f;
+        font-family: Arial;
+        color: black;
+        height: 25px;
+        text-align: center;
+        font-size: 9px;
+    }
+
+    .mydatagrid tr {
+        background-color: white;
+        font-family: Arial;
+        font-size: 9px;
+        color: black;
+        min-height: 25px;
+        text-align: center;
+        border: 1px black;
+    }
+
+        .mydatagrid tr:hover {
+            font-family: Arial;
+            background-color: #fcd8c4;
+            transition: background-color 0.3s ease;
+            text-align: center;
+        }
+
+    .mydatagrid a /** FOR THE PAGING ICONS  **/ {
+        background-color: Transparent;
+        padding: 5px 5px 5px 5px;
+        /* Jerry 2024-12-30 change the color of font to black */
+        color: black;
+        /* Jerry 2024-12-30 change the color of font to black END */
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+        .mydatagrid a:hover /** FOR THE PAGING ICONS  HOVER STYLES**/ {
+            color: black;
+        }
+
+    .mydatagrid span /** FOR THE PAGING ICONS CURRENT PAGE INDICATOR **/ {
+        color: white;
+        padding: 5px 5px 5px 5px;
+        /* Jerry 2024-12-30 Adding underline to current page index */
+        text-decoration: underline; /* Underline the current page number */
+        font-weight: bold; /* Optionally make it bold */
+        color: blue; /* Change color to blue */
+        /* Jerry 2024-12-30 Adding underline to current page index END */
+    }
+
+.pager {
+    background-color: #646464;
+    font-family: Arial;
+    color:;
+    height: 30px;
+    text-align: left;
+}
+
+.mydatagrid th {
+    padding: 2px;
+}
+
+.button_grid {
+    padding: 5px 10px;
+    background-color: transparent;
+    border: none;
+    color: #020202;
+    font-weight: bold;
+    font-style: italic;
+}
+
+    .button_grid:hover {
+        cursor: pointer;
+    }
+
+    .button_grid:focus {
+        outline: thin;
+    }
+
+
+.checkboxlist_grid {
+    background-color: white !important;
+}
+
+@media only screen and (min-width: 600px) {
+    /* For tablets: */
+
+}
+
+@media only screen and (min-width: 768px) {
+    /* For desktop: */
+    .mydatagrid th {
+        height: 25px;
+        font-size: 16px;
+    }
+
+    .mydatagrid tr {
+        font-size: 14px;
+    }
+}
+
+.table-bordered {
+    font-size: 80% !important;
+}
+
+.gvCss {
+    border-radius: 6px !important;
+    border: 2px solid #ddd !important;
+    border-collapse: separate !important;
+}
+
+    .gvCss th {
+        background-color: #f58345 !important;
+    }
+
+.pagination-ys {
+    /*display: inline-block;*/
+    padding-left: 0;
+    margin: 20px 0;
+    border-radius: 4px;
+}
+
+    .pagination-ys table > tbody > tr > td {
+        display: inline;
+    }
+
+        .pagination-ys table > tbody > tr > td > a,
+        .pagination-ys table > tbody > tr > td > span {
+            position: relative;
+            float: left;
+            padding: 8px 12px;
+            line-height: 1.42857143;
+            text-decoration: none;
+            color: #f58345;
+            background-color: #ffffff;
+            border: 1px solid #dddddd;
+            margin-left: -1px;
+        }
+
+        .pagination-ys table > tbody > tr > td > span {
+            position: relative;
+            float: left;
+            padding: 8px 12px;
+            line-height: 1.42857143;
+            text-decoration: none;
+            margin-left: -1px;
+            z-index: 2;
+            color: #aea79f;
+            background-color: #f5f5f5;
+            border-color: #dddddd;
+            cursor: default;
+        }
+
+        .pagination-ys table > tbody > tr > td:first-child > a,
+        .pagination-ys table > tbody > tr > td:first-child > span {
+            margin-left: 0;
+            border-bottom-left-radius: 4px;
+            border-top-left-radius: 4px;
+        }
+
+        .pagination-ys table > tbody > tr > td:last-child > a,
+        .pagination-ys table > tbody > tr > td:last-child > span {
+            border-bottom-right-radius: 4px;
+            border-top-right-radius: 4px;
+        }
+
+        .pagination-ys table > tbody > tr > td > a:hover,
+        .pagination-ys table > tbody > tr > td > span:hover,
+        .pagination-ys table > tbody > tr > td > a:focus,
+        .pagination-ys table > tbody > tr > td > span:focus {
+            color: #97310e;
+            background-color: #eeeeee;
+            border-color: #dddddd;
+        }
