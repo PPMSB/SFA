@@ -593,6 +593,7 @@
     <Content Include="scripts\WebCamSetup.js" />
     <Content Include="Redemption.aspx" />
     <Content Include="NLog.config" />
+    <Content Include="sync\TextFile1.txt" />
     <Content Include="Visitor_ChangePassword.aspx" />
     <Content Include="Visitor_CheckInOut.aspx" />
     <Content Include="Visitor_CheckInOutQRCode.aspx" />
